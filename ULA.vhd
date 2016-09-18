@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -39,19 +40,23 @@ end ULA;
 
 architecture Behavioral of ULA is
 
+	signal soma : STD_LOGIC_VECTOR(7 downto 0);
+
 begin
-	S <= X+Y when sel="000" else
-     X and Y when sel="001" else
-	  X or Y when sel="010" else
-	  not X when sel = "011" else
-	  Y when sel = "100";
+
+	soma <=  X+Y when sel="000" else
+			X and Y when sel="001" else
+			X or Y when sel="010" else
+			not X when sel = "011" else
+			Y when sel = "100" else
+			Y;
 	
-	process(S)
-		begin
-			NZ(0) <= '1' when S = "00000000" else
-						'0';
-			NZ(1) <= '1' when S(7) = '1' else
-						'0';
-	end process;
+	NZ(0) <= '1' when soma = "00000000" else
+				'0';
+	NZ(1) <= '1' when soma(7) = '1' else
+				'0';
+
+	S <= soma;
+
 end Behavioral;
 

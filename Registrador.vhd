@@ -30,17 +30,29 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Registrador is
-    Port ( Carga : in  STD_LOGIC;
+    Port ( clk : in STD_LOGIC;
+			  reset : in STD_LOGIC;
+			  Carga : in  STD_LOGIC;
 			  E : in  STD_LOGIC_VECTOR (7 downto 0);
            S : out  STD_LOGIC_VECTOR (7 downto 0));
 end Registrador;
 
 architecture Behavioral of Registrador is
-signal Entrada: std_logic_vector(7 downto 0);
+	signal Entrada: std_logic_vector(7 downto 0);
 
 begin
-	Entrada <= E when Carga = '1' else
-				 Entrada;
+	
+	process(clk, reset)
+	begin
+		if(reset = '1') then
+			Entrada <= "00000000";
+		elsif(clk'event and clk='1') then
+			if(Carga = '1') then
+				Entrada <= E;
+			end if;
+		end if;
+	end process;
+	
 	S <= Entrada;
 
 end Behavioral;

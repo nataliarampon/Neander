@@ -1,4 +1,4 @@
-V3 9
+V3 30
 FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Cont8.vhd" 2016/09/14.22:32:15 P.20131013
 EN work/Cont8 1473903138 \
       FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Cont8.vhd" \
@@ -7,12 +7,6 @@ AR work/Cont8/Behavioral 1473903139 \
       FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Cont8.vhd" \
       EN work/Cont8 1473903138
 FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Decoder.vhd" 2016/09/14.22:20:03 P.20131013
-EN work/Decoder 1473902408 \
-      FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Decoder.vhd" \
-      PB ieee/std_logic_1164 1381692176
-AR work/Decoder/Behavioral 1473902409 \
-      FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Decoder.vhd" \
-      EN work/Decoder 1473902408
 FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Reg2.vhd" 2016/09/14.22:35:27 P.20131013
 EN work/Reg2 1473903330 \
       FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Reg2.vhd" \
@@ -20,3 +14,45 @@ EN work/Reg2 1473903330 \
 AR work/Reg2/Behavioral 1473903331 \
       FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Reg2.vhd" \
       EN work/Reg2 1473903330
+FL C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd 2016/09/18.19:05:19 P.20131013
+EN work/Decoder 1474236367 FL C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Decoder/Behavioral 1474236368 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd EN work/Decoder 1474236367
+FL C:/Users/natal/Documents/GitHub/Neander/Decoder3.vhd 2016/09/18.19:03:18 P.20131013
+EN work/Decoder3 1474237702 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Decoder3.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Decoder3/Behavioral 1474237703 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Decoder3.vhd EN work/Decoder3 1474237702
+FL C:/Users/natal/Documents/GitHub/Neander/FlipFlopJK.vhd 2016/09/18.18:39:30 P.20131013
+EN work/FlipFlopJK 1474237700 \
+      FL C:/Users/natal/Documents/GitHub/Neander/FlipFlopJK.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/FlipFlopJK/Behavioral 1474237701 \
+      FL C:/Users/natal/Documents/GitHub/Neander/FlipFlopJK.vhd \
+      EN work/FlipFlopJK 1474237700
+FL C:/Users/natal/Documents/GitHub/Neander/GeradorTempos.vhd 2016/09/18.19:28:16 P.20131013
+EN work/GeradorTempos 1474237704 \
+      FL C:/Users/natal/Documents/GitHub/Neander/GeradorTempos.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/GeradorTempos/Behavioral 1474237705 \
+      FL C:/Users/natal/Documents/GitHub/Neander/GeradorTempos.vhd \
+      EN work/GeradorTempos 1474237704 CP work/FlipFlopJK CP work/Decoder3
+FL C:/Users/natal/Documents/GitHub/Neander/Mux.vhd 2016/09/18.18:13:23 P.20131013
+EN work/Mux 1474233205 FL C:/Users/natal/Documents/GitHub/Neander/Mux.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Mux/Behavioral 1474233206 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Mux.vhd EN work/Mux 1474233205
+FL C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd 2016/09/18.18:12:02 P.20131013
+EN work/Registrador 1474233125 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Registrador/Behavioral 1474233126 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd \
+      EN work/Registrador 1474233125
+FL C:/Users/natal/Documents/GitHub/Neander/ULA.vhd 2016/09/18.18:26:31 P.20131013
+EN work/ULA 1474233994 FL C:/Users/natal/Documents/GitHub/Neander/ULA.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/ULA/Behavioral 1474233995 \
+      FL C:/Users/natal/Documents/GitHub/Neander/ULA.vhd EN work/ULA 1474233994

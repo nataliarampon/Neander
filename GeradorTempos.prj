@@ -1,0 +1,3 @@
+vhdl work "FlipFlopJK.vhd"
+vhdl work "Decoder3.vhd"
+vhdl work "GeradorTempos.vhd"

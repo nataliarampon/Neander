@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Decoder.prj
 
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -98,26 +98,28 @@ Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
 =========================================================================
 
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Decoder.vhd" in Library work.
-Entity <Decoder> compiled.
-Entity <Decoder> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd" in Library work.
+Architecture behavioral of Entity decoder is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <Decoder> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <Decoder> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <Decoder> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <Decoder> in library <work> (Architecture <behavioral>).
 Entity <Decoder> analyzed. Unit <Decoder> generated.
 
 
@@ -128,10 +130,10 @@ Entity <Decoder> analyzed. Unit <Decoder> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <Decoder>.
-    Related source file is "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Decoder.vhd".
-    Found 16x16-bit ROM for signal <inst>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd".
+    Found 1-of-16 decoder for signal <inst>.
     Summary:
-	inferred   1 ROM(s).
+	inferred   1 Decoder(s).
 Unit <Decoder> synthesized.
 
 
@@ -139,8 +141,8 @@ Unit <Decoder> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
- 16x16-bit ROM                                         : 1
+# Decoders                                             : 1
+ 1-of-16 decoder                                       : 1
 
 =========================================================================
 
@@ -153,8 +155,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
- 16x16-bit ROM                                         : 1
+# Decoders                                             : 1
+ 1-of-16 decoder                                       : 1
 
 =========================================================================
 
@@ -268,7 +270,7 @@ Delay:               6.823ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            16   1.218   1.209  opcode_0_IBUF (opcode_0_IBUF)
-     LUT4:I0->O            1   0.704   0.420  Mrom_inst51 (inst_5_OBUF)
+     LUT4:I0->O            1   0.704   0.420  Mdecod_inst51 (inst_5_OBUF)
      OBUF:I->O                 3.272          inst_5_OBUF (inst<5>)
     ----------------------------------------
     Total                      6.823ns (5.194ns logic, 1.629ns route)
@@ -277,12 +279,12 @@ Delay:               6.823ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.49 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.59 secs
  
 --> 
 
-Total memory usage is 289456 kilobytes
+Total memory usage is 289624 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

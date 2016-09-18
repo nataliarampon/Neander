@@ -39,7 +39,7 @@ end Mux;
 architecture Behavioral of Mux is
 
 begin
-	process(sel)
+	process(sel, A, B)
 		begin
 			if(sel = '0') then
 				S <= A;
