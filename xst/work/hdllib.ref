@@ -1,6 +1,8 @@
+AR unidadecontrole behavioral C:/Users/leodo/Documents/GitHub/Neander/UnidadeControle.vhd sub00/vhpl19 1474241861
 EN cont8 NULL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Cont8.vhd" sub00/vhpl02 1473903138
 AR mux behavioral C:/Users/natal/Documents/GitHub/Neander/Mux.vhd sub00/vhpl09 1474233206
 EN flipflopjk NULL C:/Users/natal/Documents/GitHub/Neander/FlipFlopJK.vhd sub00/vhpl12 1474237700
+EN unidadecontrole NULL C:/Users/leodo/Documents/GitHub/Neander/UnidadeControle.vhd sub00/vhpl18 1474241860
 AR cont8 behavioral "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Cont8.vhd" sub00/vhpl03 1473903139
 AR flipflopjk behavioral C:/Users/natal/Documents/GitHub/Neander/FlipFlopJK.vhd sub00/vhpl13 1474237701
 AR decoder behavioral C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd sub00/vhpl01 1474236368

@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/leodo/Documents/GitHub/Neander/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/leodo/Documents/GitHub/Neander/xst"
+elaborate
+-ifn UnidadeControle.prj
+-ifmt mixed

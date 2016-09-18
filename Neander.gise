@@ -22,6 +22,7 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Neander.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Cont8.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Cont8.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Cont8.ngc"/>
@@ -119,6 +120,9 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ULA.xst"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ULA_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ULA_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="UnidadeControle.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="UnidadeControle.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="UnidadeControle.xst"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
@@ -156,6 +160,10 @@
     <transform xil_pn:end_ts="1474237705" xil_pn:in_ck="-3851938189942002877" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5261813035563543769" xil_pn:start_ts="1474237698">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Decoder3.ngr"/>
       <outfile xil_pn:name="FlipFlopJK.ngr"/>
       <outfile xil_pn:name="GeradorTempos.lso"/>
