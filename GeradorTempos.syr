@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: GeradorTempos.prj
 
@@ -113,12 +113,12 @@ Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Decoder3.vhd" in Li
 Architecture behavioral of Entity decoder3 is up to date.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/GeradorTempos.vhd" in Library work.
 Entity <geradortempos> compiled.
-Entity <GeradorTempos> (Architecture <Behavioral>) compiled.
+Entity <geradortempos> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <GeradorTempos> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <GeradorTempos> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <FlipFlopJK> in library <work> (architecture <Behavioral>).
 
@@ -128,7 +128,7 @@ Analyzing hierarchy for entity <Decoder3> in library <work> (architecture <Behav
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <GeradorTempos> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <GeradorTempos> in library <work> (Architecture <behavioral>).
 Entity <GeradorTempos> analyzed. Unit <GeradorTempos> generated.
 
 Analyzing Entity <FlipFlopJK> in library <work> (Architecture <Behavioral>).
@@ -352,16 +352,16 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
 -------------------------------------------------------------------------
 Offset:              6.095ns (Levels of Logic = 2)
   Source:            JK1/dado (FF)
-  Destination:       tempos<4> (PAD)
+  Destination:       tempos<5> (PAD)
   Source Clock:      clk rising
 
-  Data Path: JK1/dado to tempos<4>
+  Data Path: JK1/dado to tempos<5>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q             11   0.591   1.108  JK1/dado (JK1/dado)
-     LUT3:I0->O            1   0.704   0.420  DECODER/Mdecod_saida41 (tempos_4_OBUF)
-     OBUF:I->O                 3.272          tempos_4_OBUF (tempos<4>)
+     LUT3:I0->O            1   0.704   0.420  DECODER/Mdecod_saida51 (tempos_5_OBUF)
+     OBUF:I->O                 3.272          tempos_5_OBUF (tempos<5>)
     ----------------------------------------
     Total                      6.095ns (4.567ns logic, 1.528ns route)
                                        (74.9% logic, 25.1% route)
@@ -369,12 +369,12 @@ Offset:              6.095ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.54 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.62 secs
  
 --> 
 
-Total memory usage is 289632 kilobytes
+Total memory usage is 293608 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

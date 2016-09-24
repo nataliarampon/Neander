@@ -1,0 +1,2 @@
+vhdl isim_temp "ULA.vhd"
+vhdl isim_temp "TB_ULA.vhd"

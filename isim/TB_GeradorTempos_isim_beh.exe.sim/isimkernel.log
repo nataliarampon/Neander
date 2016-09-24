@@ -1,0 +1,29 @@
+Command line:
+   TB_GeradorTempos_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50102
+
+Sat Sep 24 12:54:12 2016
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 845.677 Meg
+
+ Total Signals          : 34
+ Total Nets             : 26
+ Total Signal Drivers   : 16
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 16
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 387
+Total Line Count : 38
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 845.677 Meg
+
+Sat Sep 24 12:54:18 2016
+

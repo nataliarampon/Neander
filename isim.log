@@ -1,0 +1,148 @@
+ISim log file
+Running: C:\Users\natal\Documents\GitHub\Neander\TB_ULA_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/natal/Documents/GitHub/Neander/TB_ULA_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 120 ns: Note: Valores : X = 0 Y = 0 (/tb_ula/).
+at 120 ns: Note: sel: : 0 Resultado obtido: 0 (/tb_ula/).
+at 120 ns: Note: NZ: : 1 (/tb_ula/).
+at 140 ns: Note: Valores : X = 0 Y = 1 (/tb_ula/).
+at 140 ns: Note: sel: : 0 Resultado obtido: 1 (/tb_ula/).
+at 140 ns: Note: NZ: : 0 (/tb_ula/).
+at 160 ns: Note: Valores : X = 0 Y = 2 (/tb_ula/).
+at 160 ns: Note: sel: : 0 Resultado obtido: 2 (/tb_ula/).
+at 160 ns: Note: NZ: : 0 (/tb_ula/).
+at 180 ns: Note: Valores : X = 1 Y = 3 (/tb_ula/).
+at 180 ns: Note: sel: : 0 Resultado obtido: 4 (/tb_ula/).
+at 180 ns: Note: NZ: : 0 (/tb_ula/).
+at 200 ns: Note: Valores : X = 1 Y = 4 (/tb_ula/).
+at 200 ns: Note: sel: : 0 Resultado obtido: 5 (/tb_ula/).
+at 200 ns: Note: NZ: : 0 (/tb_ula/).
+at 220 ns: Note: Valores : X = 1 Y = 5 (/tb_ula/).
+at 220 ns: Note: sel: : 0 Resultado obtido: 6 (/tb_ula/).
+at 220 ns: Note: NZ: : 0 (/tb_ula/).
+at 240 ns: Note: Valores : X = 2 Y = 6 (/tb_ula/).
+at 240 ns: Note: sel: : 0 Resultado obtido: 8 (/tb_ula/).
+at 240 ns: Note: NZ: : 0 (/tb_ula/).
+at 260 ns: Note: Valores : X = 2 Y = 7 (/tb_ula/).
+at 260 ns: Note: sel: : 0 Resultado obtido: 9 (/tb_ula/).
+at 260 ns: Note: NZ: : 0 (/tb_ula/).
+at 280 ns: Note: Valores : X = 2 Y = 8 (/tb_ula/).
+at 280 ns: Note: sel: : 0 Resultado obtido: 10 (/tb_ula/).
+at 280 ns: Note: NZ: : 0 (/tb_ula/).
+at 300 ns: Note: Valores : X = 3 Y = 9 (/tb_ula/).
+at 300 ns: Note: sel: : 0 Resultado obtido: 12 (/tb_ula/).
+at 300 ns: Note: NZ: : 0 (/tb_ula/).
+at 320 ns: Note: Valores : X = 3 Y = 10 (/tb_ula/).
+at 320 ns: Note: sel: : 0 Resultado obtido: 13 (/tb_ula/).
+at 320 ns: Note: NZ: : 0 (/tb_ula/).
+at 340 ns: Note: Valores : X = 3 Y = 11 (/tb_ula/).
+at 340 ns: Note: sel: : 0 Resultado obtido: 14 (/tb_ula/).
+at 340 ns: Note: NZ: : 0 (/tb_ula/).
+at 360 ns: Note: Valores : X = 4 Y = 12 (/tb_ula/).
+at 360 ns: Note: sel: : 1 Resultado obtido: 4 (/tb_ula/).
+at 360 ns: Note: NZ: : 0 (/tb_ula/).
+at 380 ns: Note: Valores : X = 4 Y = 13 (/tb_ula/).
+at 380 ns: Note: sel: : 1 Resultado obtido: 4 (/tb_ula/).
+at 380 ns: Note: NZ: : 0 (/tb_ula/).
+at 400 ns: Note: Valores : X = 4 Y = 14 (/tb_ula/).
+at 400 ns: Note: sel: : 1 Resultado obtido: 4 (/tb_ula/).
+at 400 ns: Note: NZ: : 0 (/tb_ula/).
+at 420 ns: Note: Valores : X = 5 Y = 15 (/tb_ula/).
+at 420 ns: Note: sel: : 1 Resultado obtido: 5 (/tb_ula/).
+at 420 ns: Note: NZ: : 0 (/tb_ula/).
+at 440 ns: Note: Valores : X = 5 Y = 16 (/tb_ula/).
+at 440 ns: Note: sel: : 1 Resultado obtido: 0 (/tb_ula/).
+at 440 ns: Note: NZ: : 1 (/tb_ula/).
+at 460 ns: Note: Valores : X = 5 Y = 17 (/tb_ula/).
+at 460 ns: Note: sel: : 1 Resultado obtido: 1 (/tb_ula/).
+at 460 ns: Note: NZ: : 0 (/tb_ula/).
+at 480 ns: Note: Valores : X = 6 Y = 18 (/tb_ula/).
+at 480 ns: Note: sel: : 1 Resultado obtido: 2 (/tb_ula/).
+at 480 ns: Note: NZ: : 0 (/tb_ula/).
+at 500 ns: Note: Valores : X = 6 Y = 19 (/tb_ula/).
+at 500 ns: Note: sel: : 1 Resultado obtido: 2 (/tb_ula/).
+at 500 ns: Note: NZ: : 0 (/tb_ula/).
+at 520 ns: Note: Valores : X = 6 Y = 20 (/tb_ula/).
+at 520 ns: Note: sel: : 1 Resultado obtido: 4 (/tb_ula/).
+at 520 ns: Note: NZ: : 0 (/tb_ula/).
+at 540 ns: Note: Valores : X = 7 Y = 21 (/tb_ula/).
+at 540 ns: Note: sel: : 1 Resultado obtido: 5 (/tb_ula/).
+at 540 ns: Note: NZ: : 0 (/tb_ula/).
+at 560 ns: Note: Valores : X = 7 Y = 22 (/tb_ula/).
+at 560 ns: Note: sel: : 1 Resultado obtido: 6 (/tb_ula/).
+at 560 ns: Note: NZ: : 0 (/tb_ula/).
+at 580 ns: Note: Valores : X = 7 Y = 23 (/tb_ula/).
+at 580 ns: Note: sel: : 1 Resultado obtido: 7 (/tb_ula/).
+at 580 ns: Note: NZ: : 0 (/tb_ula/).
+at 600 ns: Note: Valores : X = 8 Y = 24 (/tb_ula/).
+at 600 ns: Note: sel: : 2 Resultado obtido: 24 (/tb_ula/).
+at 600 ns: Note: NZ: : 0 (/tb_ula/).
+at 620 ns: Note: Valores : X = 8 Y = 25 (/tb_ula/).
+at 620 ns: Note: sel: : 2 Resultado obtido: 25 (/tb_ula/).
+at 620 ns: Note: NZ: : 0 (/tb_ula/).
+at 640 ns: Note: Valores : X = 8 Y = 26 (/tb_ula/).
+at 640 ns: Note: sel: : 2 Resultado obtido: 26 (/tb_ula/).
+at 640 ns: Note: NZ: : 0 (/tb_ula/).
+at 660 ns: Note: Valores : X = 9 Y = 27 (/tb_ula/).
+at 660 ns: Note: sel: : 2 Resultado obtido: 27 (/tb_ula/).
+at 660 ns: Note: NZ: : 0 (/tb_ula/).
+at 680 ns: Note: Valores : X = 9 Y = 28 (/tb_ula/).
+at 680 ns: Note: sel: : 2 Resultado obtido: 29 (/tb_ula/).
+at 680 ns: Note: NZ: : 0 (/tb_ula/).
+at 700 ns: Note: Valores : X = 9 Y = 29 (/tb_ula/).
+at 700 ns: Note: sel: : 2 Resultado obtido: 29 (/tb_ula/).
+at 700 ns: Note: NZ: : 0 (/tb_ula/).
+at 720 ns: Note: Valores : X = 10 Y = 30 (/tb_ula/).
+at 720 ns: Note: sel: : 2 Resultado obtido: 30 (/tb_ula/).
+at 720 ns: Note: NZ: : 0 (/tb_ula/).
+at 740 ns: Note: Valores : X = 10 Y = 31 (/tb_ula/).
+at 740 ns: Note: sel: : 2 Resultado obtido: 31 (/tb_ula/).
+at 740 ns: Note: NZ: : 0 (/tb_ula/).
+at 760 ns: Note: Valores : X = 10 Y = 32 (/tb_ula/).
+at 760 ns: Note: sel: : 2 Resultado obtido: 42 (/tb_ula/).
+at 760 ns: Note: NZ: : 0 (/tb_ula/).
+at 780 ns: Note: Valores : X = 11 Y = 33 (/tb_ula/).
+at 780 ns: Note: sel: : 2 Resultado obtido: 43 (/tb_ula/).
+at 780 ns: Note: NZ: : 0 (/tb_ula/).
+at 800 ns: Note: Valores : X = 11 Y = 34 (/tb_ula/).
+at 800 ns: Note: sel: : 2 Resultado obtido: 43 (/tb_ula/).
+at 800 ns: Note: NZ: : 0 (/tb_ula/).
+at 820 ns: Note: Valores : X = 11 Y = 35 (/tb_ula/).
+at 820 ns: Note: sel: : 2 Resultado obtido: 43 (/tb_ula/).
+at 820 ns: Note: NZ: : 0 (/tb_ula/).
+at 840 ns: Note: Valores : X = 12 Y = 36 (/tb_ula/).
+at 840 ns: Note: sel: : 3 Resultado obtido: 243 (/tb_ula/).
+at 840 ns: Note: NZ: : 2 (/tb_ula/).
+at 860 ns: Note: Valores : X = 12 Y = 37 (/tb_ula/).
+at 860 ns: Note: sel: : 3 Resultado obtido: 243 (/tb_ula/).
+at 860 ns: Note: NZ: : 2 (/tb_ula/).
+at 880 ns: Note: Valores : X = 12 Y = 38 (/tb_ula/).
+at 880 ns: Note: sel: : 3 Resultado obtido: 243 (/tb_ula/).
+at 880 ns: Note: NZ: : 2 (/tb_ula/).
+at 900 ns: Note: Valores : X = 13 Y = 39 (/tb_ula/).
+at 900 ns: Note: sel: : 3 Resultado obtido: 242 (/tb_ula/).
+at 900 ns: Note: NZ: : 2 (/tb_ula/).
+at 920 ns: Note: Valores : X = 13 Y = 40 (/tb_ula/).
+at 920 ns: Note: sel: : 3 Resultado obtido: 242 (/tb_ula/).
+at 920 ns: Note: NZ: : 2 (/tb_ula/).
+at 940 ns: Note: Valores : X = 13 Y = 41 (/tb_ula/).
+at 940 ns: Note: sel: : 3 Resultado obtido: 242 (/tb_ula/).
+at 940 ns: Note: NZ: : 2 (/tb_ula/).
+at 960 ns: Note: Valores : X = 14 Y = 42 (/tb_ula/).
+at 960 ns: Note: sel: : 3 Resultado obtido: 241 (/tb_ula/).
+at 960 ns: Note: NZ: : 2 (/tb_ula/).
+at 980 ns: Note: Valores : X = 14 Y = 43 (/tb_ula/).
+at 980 ns: Note: sel: : 3 Resultado obtido: 241 (/tb_ula/).
+at 980 ns: Note: NZ: : 2 (/tb_ula/).
+at 1 us: Note: Valores : X = 14 Y = 44 (/tb_ula/).
+at 1 us: Note: sel: : 3 Resultado obtido: 241 (/tb_ula/).
+at 1 us: Note: NZ: : 2 (/tb_ula/).

@@ -1,0 +1,4 @@
+vhdl isim_temp "FlipFlopJK.vhd"
+vhdl isim_temp "Decoder3.vhd"
+vhdl isim_temp "GeradorTempos.vhd"
+vhdl isim_temp "TB_GeradorTempos.vhd"

@@ -53,7 +53,7 @@ begin
 	secondOr <= thirdAnd or goto_t0;
 	
 	JK3: entity work.FlipFlopJK port map(clk, secondAnd, secondOr, signalJK3); 
-	counterCode <= signalJK1&signalJK2&signalJK3;
+	counterCode <= signalJK3&signalJK2&signalJK1;
 	
 	DECODER: entity work.Decoder3 port map(counterCode, tempos);
 
