@@ -1,12 +1,12 @@
 set -tmpdir "xst/projnav.tmp"
 set -xsthdpdir "xst"
 run
--ifn UnidadeControle.prj
+-ifn UC.prj
 -ifmt mixed
--ofn UnidadeControle
+-ofn UC
 -ofmt NGC
 -p xc3s100e-4-cp132
--top UnidadeControle
+-top UC
 -opt_mode Speed
 -opt_level 1
 -iuc NO

@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/natal/Documents/GitHub/Neander/TB_ULA_isim_beh.exe" -prj "C:/Users/natal/Documents/GitHub/Neander/TB_ULA_beh.prj" "work.TB_ULA" 
+-intstyle "ise" -incremental -o "C:/Users/natal/Documents/GitHub/Neander/UC_isim_beh.exe" -prj "C:/Users/natal/Documents/GitHub/Neander/UC_beh.prj" "work.UC" 

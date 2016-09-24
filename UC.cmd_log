@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/natal/Documents/GitHub/Neander/UC.xst" -ofn "C:/Users/natal/Documents/GitHub/Neander/UC.syr" 
