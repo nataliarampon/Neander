@@ -12,7 +12,7 @@ Total CPU time to Xst completion: 0.11 secs
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
---> Reading design: ULA.prj
+--> Reading design: DivFreq.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -35,17 +35,17 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "ULA.prj"
+Input File Name                    : "DivFreq.prj"
 Input Format                       : mixed
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "ULA"
+Output File Name                   : "DivFreq"
 Output Format                      : NGC
 Target Device                      : xc3s100e-4-cp132
 
 ---- Source Options
-Top Module Name                    : ULA
+Top Module Name                    : DivFreq
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -107,21 +107,21 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/ULA.vhd" in Library work.
-Entity <ula> compiled.
-Entity <ula> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd" in Library work.
+Entity <divfreq> compiled.
+Entity <DivFreq> (Architecture <Behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <ULA> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <DivFreq> in library <work> (architecture <Behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <ULA> in library <work> (Architecture <behavioral>).
-Entity <ULA> analyzed. Unit <ULA> generated.
+Analyzing Entity <DivFreq> in library <work> (Architecture <Behavioral>).
+Entity <DivFreq> analyzed. Unit <DivFreq> generated.
 
 
 =========================================================================
@@ -130,25 +130,24 @@ Entity <ULA> analyzed. Unit <ULA> generated.
 
 Performing bidirectional port resolution...
 
-Synthesizing Unit <ULA>.
-    Related source file is "C:/Users/natal/Documents/GitHub/Neander/ULA.vhd".
-    Found 8x8-bit multiplier for signal <mult>.
-    Found 8-bit addsub for signal <soma$addsub0000>.
+Synthesizing Unit <DivFreq>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd".
+    Found 1-bit register for signal <clk_out>.
+    Found 32-bit up counter for signal <cont>.
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   1 Multiplier(s).
-Unit <ULA> synthesized.
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <DivFreq> synthesized.
 
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 1
- 8x8-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 1
- 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 1
+ 1-bit register                                        : 1
 
 =========================================================================
 
@@ -161,10 +160,10 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 1
- 8x8-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 1
- 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
 
 =========================================================================
 
@@ -172,18 +171,21 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 
-Optimizing unit <ULA> ...
+Optimizing unit <DivFreq> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block ULA, actual ratio is 3.
+Found area constraint ratio of 100 (+ 5) on block DivFreq, actual ratio is 2.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+
 =========================================================================
 
 =========================================================================
@@ -201,28 +203,30 @@ Partition Implementation Status
 *                            Final Report                               *
 =========================================================================
 Final Results
-RTL Top Level Output File Name     : ULA.ngr
-Top Level Output File Name         : ULA
+RTL Top Level Output File Name     : DivFreq.ngr
+Top Level Output File Name         : DivFreq
 Output Format                      : NGC
 Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 37
+# IOs                              : 2
 
 Cell Usage :
-# BELS                             : 74
+# BELS                             : 114
 #      GND                         : 1
-#      LUT3                        : 19
-#      LUT4                        : 28
-#      MUXCY                       : 7
-#      MUXF5                       : 11
-#      XORCY                       : 8
-# IO Buffers                       : 37
-#      IBUF                        : 19
-#      OBUF                        : 18
-# MULTs                            : 1
-#      MULT18X18SIO                : 1
+#      INV                         : 2
+#      LUT1                        : 31
+#      LUT4                        : 8
+#      MUXCY                       : 39
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 33
+#      FDR                         : 33
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 1
+#      OBUF                        : 1
 =========================================================================
 
 Device utilization summary:
@@ -230,11 +234,12 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       25  out of    960     2%  
- Number of 4 input LUTs:                 47  out of   1920     2%  
- Number of IOs:                          37
- Number of bonded IOBs:                  37  out of     83    44%  
- Number of MULT18X18SIOs:                 1  out of      4    25%  
+ Number of Slices:                       22  out of    960     2%  
+ Number of Slice Flip Flops:             33  out of   1920     1%  
+ Number of 4 input LUTs:                 41  out of   1920     2%  
+ Number of IOs:                           2
+ Number of bonded IOBs:                   2  out of     83     2%  
+ Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
 Partition Resource Summary:
@@ -254,7 +259,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 33    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -264,57 +273,76 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: No path found
+   Minimum period: 6.364ns (Maximum Frequency: 157.146MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: 15.376ns
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1213 / 18
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.364ns (frequency: 157.146MHz)
+  Total number of paths / destination ports: 1584 / 65
 -------------------------------------------------------------------------
-Delay:               15.376ns (Levels of Logic = 15)
-  Source:            sel<2> (PAD)
-  Destination:       NZ<0> (PAD)
+Delay:               6.364ns (Levels of Logic = 10)
+  Source:            cont_8 (FF)
+  Destination:       clk_out (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
 
-  Data Path: sel<2> to NZ<0>
+  Data Path: cont_8 to clk_out
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            26   1.218   1.435  sel_2_IBUF (sel_2_IBUF)
-     LUT3:I0->O            9   0.704   0.855  soma_mux00002 (soma_mux0000)
-     LUT3:I2->O            1   0.704   0.000  Maddsub_soma_addsub0000_lut<0> (Maddsub_soma_addsub0000_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  Maddsub_soma_addsub0000_cy<0> (Maddsub_soma_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_soma_addsub0000_cy<1> (Maddsub_soma_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_soma_addsub0000_cy<2> (Maddsub_soma_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_soma_addsub0000_cy<3> (Maddsub_soma_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_soma_addsub0000_cy<4> (Maddsub_soma_addsub0000_cy<4>)
-     XORCY:CI->O           1   0.804   0.455  Maddsub_soma_addsub0000_xor<5> (soma_addsub0000<5>)
-     LUT4:I2->O            1   0.704   0.000  soma<5>25_F (N17)
-     MUXF5:I0->O           1   0.321   0.455  soma<5>25 (soma<5>25)
-     LUT3:I2->O            2   0.704   0.622  soma<5>35 (S_5_OBUF)
-     LUT4:I0->O            1   0.704   0.595  NZ_0_cmp_eq000028 (NZ_0_cmp_eq000028)
-     LUT3:I0->O            1   0.704   0.420  NZ_0_cmp_eq000031 (NZ_0_OBUF)
-     OBUF:I->O                 3.272          NZ_0_OBUF (NZ<0>)
+     FDR:C->Q              2   0.591   0.622  cont_8 (cont_8)
+     LUT4:I0->O            1   0.704   0.000  cont_cmp_eq0000_wg_lut<0> (cont_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  cont_cmp_eq0000_wg_cy<0> (cont_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<1> (cont_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<2> (cont_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<3> (cont_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<4> (cont_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<5> (cont_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<6> (cont_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          33   0.331   1.263  cont_cmp_eq0000_wg_cy<7> (cont_cmp_eq0000)
+     INV:I->O              1   0.704   0.420  clk_out_not00011_INV_0 (clk_out_not0001)
+     FDR:R                     0.911          clk_out
     ----------------------------------------
-    Total                     15.376ns (10.539ns logic, 4.837ns route)
-                                       (68.5% logic, 31.5% route)
+    Total                      6.364ns (4.059ns logic, 2.305ns route)
+                                       (63.8% logic, 36.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            clk_out (FF)
+  Destination:       clk_out (PAD)
+  Source Clock:      clk rising
+
+  Data Path: clk_out to clk_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.591   0.420  clk_out (clk_out_OBUF)
+     OBUF:I->O                 3.272          clk_out_OBUF (clk_out)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.77 secs
+Total CPU time to Xst completion: 5.76 secs
  
 --> 
 
-Total memory usage is 309816 kilobytes
+Total memory usage is 293644 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

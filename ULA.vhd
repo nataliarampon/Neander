@@ -35,21 +35,31 @@ entity ULA is
 			  X : in  STD_LOGIC_VECTOR (7 downto 0);
            Y : in  STD_LOGIC_VECTOR (7 downto 0);
            S : out  STD_LOGIC_VECTOR (7 downto 0);
+			  M : out STD_LOGIC_VECTOR (7 downto 0);
            NZ : out  STD_LOGIC_VECTOR (1 downto 0));
 end ULA;
 
 architecture Behavioral of ULA is
 
 	signal soma : STD_LOGIC_VECTOR(7 downto 0);
+	signal mult : STD_LOGIC_VECTOR(15 downto 0);
 
 begin
 
-	soma <=  X+Y when sel="000" else
-			X and Y when sel="001" else
-			X or Y when sel="010" else
-			not X when sel = "011" else
-			Y when sel = "100" else
-			Y;
+	process(sel, X, Y)
+	begin
+		mult <= X*Y;
+		case sel is
+			when "000" => soma <= X+Y;
+			when "001" => soma <= X and Y;
+			when "010" => soma <= X or Y;
+			when "011" => soma <= not X;
+			when "100" => soma <= Y;
+			when "101" => soma <= X-Y;
+			when "110" => soma <= mult(7 downto 0);
+			when others => soma <= Y;
+		end case;
+	end process;
 	
 	NZ(0) <= '1' when soma = "00000000" else
 				'0';
@@ -57,6 +67,7 @@ begin
 				'0';
 
 	S <= soma;
+	M <= mult(15 downto 8);
 
 end Behavioral;
 

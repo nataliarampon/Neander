@@ -12,7 +12,7 @@ Total CPU time to Xst completion: 0.11 secs
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
---> Reading design: ULA.prj
+--> Reading design: Neander.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -35,17 +35,17 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "ULA.prj"
+Input File Name                    : "Neander.prj"
 Input Format                       : mixed
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "ULA"
+Output File Name                   : "Neander"
 Output Format                      : NGC
 Target Device                      : xc3s100e-4-cp132
 
 ---- Source Options
-Top Module Name                    : ULA
+Top Module Name                    : Neander
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -107,21 +107,28 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/ULA.vhd" in Library work.
-Entity <ula> compiled.
-Entity <ula> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd" in Library work.
+Architecture behavioral of Entity divfreq is up to date.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Neander.vhd" in Library work.
+Entity <Neander> compiled.
+Entity <Neander> (Architecture <Behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <ULA> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <Neander> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <DivFreq> in library <work> (architecture <Behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <ULA> in library <work> (Architecture <behavioral>).
-Entity <ULA> analyzed. Unit <ULA> generated.
+Analyzing Entity <Neander> in library <work> (Architecture <Behavioral>).
+Entity <Neander> analyzed. Unit <Neander> generated.
+
+Analyzing Entity <DivFreq> in library <work> (Architecture <Behavioral>).
+Entity <DivFreq> analyzed. Unit <DivFreq> generated.
 
 
 =========================================================================
@@ -130,25 +137,40 @@ Entity <ULA> analyzed. Unit <ULA> generated.
 
 Performing bidirectional port resolution...
 
-Synthesizing Unit <ULA>.
-    Related source file is "C:/Users/natal/Documents/GitHub/Neander/ULA.vhd".
-    Found 8x8-bit multiplier for signal <mult>.
-    Found 8-bit addsub for signal <soma$addsub0000>.
+Synthesizing Unit <DivFreq>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd".
+    Found 1-bit register for signal <clk_out>.
+    Found 32-bit up counter for signal <cont>.
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   1 Multiplier(s).
-Unit <ULA> synthesized.
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <DivFreq> synthesized.
 
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+Synthesizing Unit <Neander>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/Neander.vhd".
+WARNING:Xst:647 - Input <button_mem_inc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1306 - Output <an> is never assigned.
+WARNING:Xst:1306 - Output <power_on_LED> is never assigned.
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <button_mem_dec> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <button_data_inc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <button_data_dec> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <start_but> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <show_mem> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1306 - Output <display> is never assigned.
+WARNING:Xst:646 - Signal <clkKHz> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <Neander> synthesized.
+
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 1
- 8x8-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 1
- 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 1
+ 1-bit register                                        : 1
 
 =========================================================================
 
@@ -156,27 +178,30 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1290 - Hierarchical block <DIV_FREQ> is unconnected in block <Neander>.
+   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 1
- 8x8-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 1
- 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <DIV_FREQ/clk_out> of sequential type is unconnected in block <Neander>.
 
-Optimizing unit <ULA> ...
+Optimizing unit <Neander> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block ULA, actual ratio is 3.
+Found area constraint ratio of 100 (+ 5) on block Neander, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -201,28 +226,16 @@ Partition Implementation Status
 *                            Final Report                               *
 =========================================================================
 Final Results
-RTL Top Level Output File Name     : ULA.ngr
-Top Level Output File Name         : ULA
+RTL Top Level Output File Name     : Neander.ngr
+Top Level Output File Name         : Neander
 Output Format                      : NGC
 Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 37
+# IOs                              : 20
 
 Cell Usage :
-# BELS                             : 74
-#      GND                         : 1
-#      LUT3                        : 19
-#      LUT4                        : 28
-#      MUXCY                       : 7
-#      MUXF5                       : 11
-#      XORCY                       : 8
-# IO Buffers                       : 37
-#      IBUF                        : 19
-#      OBUF                        : 18
-# MULTs                            : 1
-#      MULT18X18SIO                : 1
 =========================================================================
 
 Device utilization summary:
@@ -230,11 +243,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       25  out of    960     2%  
- Number of 4 input LUTs:                 47  out of   1920     2%  
- Number of IOs:                          37
- Number of bonded IOBs:                  37  out of     83    44%  
- Number of MULT18X18SIOs:                 1  out of      4    25%  
+ Number of Slices:                        0  out of    960     0%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                   0  out of     83     0%  
 
 ---------------------------
 Partition Resource Summary:
@@ -267,54 +278,23 @@ Speed Grade: -4
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 15.376ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1213 / 18
--------------------------------------------------------------------------
-Delay:               15.376ns (Levels of Logic = 15)
-  Source:            sel<2> (PAD)
-  Destination:       NZ<0> (PAD)
-
-  Data Path: sel<2> to NZ<0>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            26   1.218   1.435  sel_2_IBUF (sel_2_IBUF)
-     LUT3:I0->O            9   0.704   0.855  soma_mux00002 (soma_mux0000)
-     LUT3:I2->O            1   0.704   0.000  Maddsub_soma_addsub0000_lut<0> (Maddsub_soma_addsub0000_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  Maddsub_soma_addsub0000_cy<0> (Maddsub_soma_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_soma_addsub0000_cy<1> (Maddsub_soma_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_soma_addsub0000_cy<2> (Maddsub_soma_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_soma_addsub0000_cy<3> (Maddsub_soma_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_soma_addsub0000_cy<4> (Maddsub_soma_addsub0000_cy<4>)
-     XORCY:CI->O           1   0.804   0.455  Maddsub_soma_addsub0000_xor<5> (soma_addsub0000<5>)
-     LUT4:I2->O            1   0.704   0.000  soma<5>25_F (N17)
-     MUXF5:I0->O           1   0.321   0.455  soma<5>25 (soma<5>25)
-     LUT3:I2->O            2   0.704   0.622  soma<5>35 (S_5_OBUF)
-     LUT4:I0->O            1   0.704   0.595  NZ_0_cmp_eq000028 (NZ_0_cmp_eq000028)
-     LUT3:I0->O            1   0.704   0.420  NZ_0_cmp_eq000031 (NZ_0_OBUF)
-     OBUF:I->O                 3.272          NZ_0_OBUF (NZ<0>)
-    ----------------------------------------
-    Total                     15.376ns (10.539ns logic, 4.837ns route)
-                                       (68.5% logic, 31.5% route)
-
-=========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.77 secs
+Total CPU time to Xst completion: 4.38 secs
  
 --> 
 
-Total memory usage is 309816 kilobytes
+Total memory usage is 293660 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 
