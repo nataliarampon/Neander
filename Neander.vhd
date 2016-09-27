@@ -36,11 +36,10 @@ entity Neander is
            button_mem_dec : in  STD_LOGIC;
            button_data_inc : in  STD_LOGIC;
            button_data_dec : in  STD_LOGIC;
-           show_mem : in  STD_LOGIC;
-           start_but : in  STD_LOGIC;
-           display : out  STD_LOGIC_VECTOR (6 downto 0);
-           an : out  STD_LOGIC_VECTOR (3 downto 0);
-           power_on_LED : out  STD_LOGIC);
+           mem			: out STD_LOGIC_VECTOR(7 downto 0);
+			  acumulador : out STD_LOGIC_VECTOR(7 downto 0);
+			  halt : out STD_LOGIC
+	);
 end Neander;
 
 architecture Behavioral of Neander is
@@ -60,26 +59,14 @@ architecture Behavioral of Neander is
 		  );
 	END COMPONENT;
 		
-		signal clkKHz : std_logic;
+		signal clkKHz, cargaPC, cargaREM, cargaRI, cargaNZ, cargaAC, cargaRDM, incPC, write_read, selRDM : std_logic;
+		signal selREM, NZout, NZin : std_logic_vector(1 downto 0);
+		signal selULA : std_logic_vector(2 downto 0);
+		signal ULAout, opcode, PCout, ACout, RDMout, REMout, Ramout, mult, MUX3out, MUX2out : std_logic_vector(7 downto 0);
+		signal inst : std_logic_vector(15 downto 0);
 
 begin
 
-	-------------------------------------------------------------------
-	-- This is the first "layer" of implementation:
-	-- The FPGA board clock in 50 MHz is divided into a KHZ counterpart
-	-- to be used in the 7-segment display and in the Neander processor
-	--------------------------------------------------------------------
-
-	DIV_FREQ: entity work.DivFreq port map(
-		clk  => clk,
-      clk_out => clkKHz
-	);
-	
-	----------------------------------------------------------------------
-	-- This is the second "layer" of implementation:
-	-- The actual Neander processor as displayed in the report's schematic
-	----------------------------------------------------------------------
-	
 	PC: entity work.Cont8 port map(
 		clk => clkKHz,
 		reset => reset,
@@ -90,7 +77,7 @@ begin
 	);
 	
 	MUX3: entity work.Mux3 port map(
-		sel => selMUX3,
+		sel => selREM,
       A => PCout,
       B => RDMout,
       C => mult,
@@ -105,7 +92,7 @@ begin
       S => REMout
 	); 
 	
-   BRAM : Memoria port map( --- MEMORIA NAO FIZ N SEI FAZER ---
+   BRAM : Memoria port map(
     clka => clkKHz,
     wea => write_read,
     addra => REMout,
@@ -115,7 +102,7 @@ begin
     web => '0',
     addrb => REMout,
     dinb => "00000000",
-    doutb => displayMem
+    doutb => mem
    );
   
 	Mux2: entity work.Mux port map(
@@ -129,7 +116,7 @@ begin
 		clk => clkKHz,
 		reset => reset,
 	   Carga => cargaRDM,
-		RD => RD, --read
+		RD => write_read, --read
 		A => MUX2out,
 		B => RAMout,
       S => RDMout
@@ -173,11 +160,10 @@ begin
       saida => NZout
 	);
 	
-	TIMER: entity work.GeradorTempos port map(
-		clk => clkKHz,
-      goto_t0 => goto,
-      tempos => tempos
-	);
+	--TIMER: entity work.GeradorTempos port map(
+		--clk => clkKHz,
+      --tempos => tempos
+	--);
 	
 	UC: entity work.UnidadeControle port map(
 		rst => reset,
@@ -185,31 +171,19 @@ begin
 		N => NZout(1),
 		Z => NZout(0),
 		Decoder => inst,
-		Temp => tempos,
 		cargaAC => cargaAC,
 		selULA => selULA,
 		cargaNZ => cargaNZ,
 		cargaRI => cargaRI,
 		cargaPC => cargaPC,
 		incPC => incPC,
-		sel => selMUX3,
+		sel => selREM,
 		cargaREM => cargaREM,
-		RD => RD,
-		WRT => WRT,
-		goto => goto,
+		read_write=> write_read,
 		halt => halt,
 		selRDM => selRDM,
 		cargaRDM => cargaRDM
-	);
-	
-	----------------------------------------------------------------------
-	-- This is the third "layer" of implementation:
-	-- The conversors and multiplexer to display the memory location, data
-	-- or the acumulator
-	----------------------------------------------------------------------
-	
-	
-	
+	);	
 	
 
 end Behavioral;

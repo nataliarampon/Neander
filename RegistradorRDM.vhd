@@ -49,7 +49,7 @@ begin
 		elsif(clk'event and clk='1') then
 			if(Carga = '1') then
 				Entrada <= A;
-			elsif(RD = '1') then
+			elsif(RD = '0') then
 				Entrada <= B;
 			end if;
 		end if;
