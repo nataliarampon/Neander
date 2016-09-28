@@ -68,6 +68,11 @@ architecture Behavioral of Neander is
 
 begin
 
+	DIV_FREQ: entity work.DivFreq port map(
+		clk => clk,
+      clk_out => clkKHz
+	);
+
 	PC: entity work.Cont8 port map(
 		clk => clkKHz,
 		reset => reset,
@@ -186,6 +191,7 @@ begin
 		cargaRDM => cargaRDM
 	);	
 	
+	acumulador <= ACout;
 
 end Behavioral;
 

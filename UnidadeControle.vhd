@@ -85,6 +85,20 @@ begin
 	process(state, decoder, N, Z)
 		begin
 			
+			cargaAC <= '0';
+         selULA <= "000";
+         cargaNZ <= '0';
+         cargaRI <= '0';
+         cargaPC <= '0';
+         incPC <= '0';
+         sel <= "00";
+         cargaREM <= '0';
+         read_write <="0";
+		   halt <= '0';
+		   selRDM <= '0';
+         cargaRDM <= '0';
+			next_state <= s0;
+			
 			case state is
 				when s0 => 
 					sel <= "00";

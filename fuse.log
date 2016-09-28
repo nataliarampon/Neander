@@ -1,19 +1,49 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/natal/Documents/GitHub/Neander/UC_isim_beh.exe -prj C:/Users/natal/Documents/GitHub/Neander/UC_beh.prj work.UC 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/natal/Documents/GitHub/Neander/TB_Neander_isim_beh.exe -prj C:/Users/natal/Documents/GitHub/Neander/TB_Neander_beh.prj work.TB_Neander 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/ipcore_dir/Memoria.vhd" into library work
 Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/UnidadeControle.vhd" into library work
-Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/UC.vhd" into library work
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/ULA.vhd" into library work
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/RegistradorRDM.vhd" into library work
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd" into library work
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/Reg2.vhd" into library work
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/Mux3.vhd" into library work
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/Mux.vhd" into library work
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd" into library work
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd" into library work
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/Cont8.vhd" into library work
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/Neander.vhd" into library work
+Parsing VHDL file "C:/Users/natal/Documents/GitHub/Neander/TB_Neander.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity DivFreq [divfreq_default]
+Compiling architecture behavioral of entity Cont8 [cont8_default]
+Compiling architecture behavioral of entity Mux3 [mux3_default]
+Compiling architecture behavioral of entity Registrador [registrador_default]
+Compiling package textio
+Compiling package std_logic_textio
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_3_softecc_output_reg_stage [\BLK_MEM_GEN_V7_3_softecc_output...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_3_mem_module [\BLK_MEM_GEN_V7_3_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_3 [\BLK_MEM_GEN_V7_3("blk_mem_gen_v...]
+Compiling architecture memoria_a of entity Memoria [memoria_default]
+Compiling architecture behavioral of entity Mux [mux_default]
+Compiling architecture behavioral of entity RegistradorRDM [registradorrdm_default]
+Compiling architecture behavioral of entity Decoder [decoder_default]
+Compiling architecture behavioral of entity ULA [ula_default]
+Compiling architecture behavioral of entity Reg2 [reg2_default]
 Compiling architecture behavioral of entity UnidadeControle [unidadecontrole_default]
-Compiling architecture behavior of entity uc
+Compiling architecture behavioral of entity Neander [neander_default]
+Compiling architecture behavior of entity tb_neander
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 5 VHDL Units
-Built simulation executable C:/Users/natal/Documents/GitHub/Neander/UC_isim_beh.exe
-Fuse Memory Usage: 29080 KB
-Fuse CPU Usage: 453 ms
+Waiting for 15 sub-compilation(s) to finish...
+Compiled 39 VHDL Units
+Built simulation executable C:/Users/natal/Documents/GitHub/Neander/TB_Neander_isim_beh.exe
+Fuse Memory Usage: 38448 KB
+Fuse CPU Usage: 905 ms

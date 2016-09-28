@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: Neander.prj
 
@@ -109,26 +109,92 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd" in Library work.
 Architecture behavioral of Entity divfreq is up to date.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Cont8.vhd" in Library work.
+Architecture behavioral of Entity cont8 is up to date.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Mux3.vhd" in Library work.
+Architecture behavioral of Entity mux3 is up to date.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd" in Library work.
+Architecture behavioral of Entity registrador is up to date.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/ipcore_dir/Memoria.vhd" in Library work.
+Architecture memoria_a of Entity memoria is up to date.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Mux.vhd" in Library work.
+Architecture behavioral of Entity mux is up to date.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/RegistradorRDM.vhd" in Library work.
+Architecture behavioral of Entity registradorrdm is up to date.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd" in Library work.
+Architecture behavioral of Entity decoder is up to date.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/ULA.vhd" in Library work.
+Architecture behavioral of Entity ula is up to date.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Reg2.vhd" in Library work.
+Architecture behavioral of Entity reg2 is up to date.
+Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/UnidadeControle.vhd" in Library work.
+Architecture behavioral of Entity unidadecontrole is up to date.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Neander.vhd" in Library work.
-Entity <Neander> compiled.
-Entity <Neander> (Architecture <Behavioral>) compiled.
+Entity <neander> compiled.
+Entity <neander> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <Neander> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <Neander> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <DivFreq> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Cont8> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Mux3> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Registrador> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Mux> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <RegistradorRDM> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Decoder> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ULA> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Reg2> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <UnidadeControle> in library <work> (architecture <Behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <Neander> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <Neander> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/natal/Documents/GitHub/Neander/Neander.vhd" line 101: Instantiating black box module <Memoria>.
 Entity <Neander> analyzed. Unit <Neander> generated.
 
 Analyzing Entity <DivFreq> in library <work> (Architecture <Behavioral>).
 Entity <DivFreq> analyzed. Unit <DivFreq> generated.
+
+Analyzing Entity <Cont8> in library <work> (Architecture <Behavioral>).
+Entity <Cont8> analyzed. Unit <Cont8> generated.
+
+Analyzing Entity <Mux3> in library <work> (Architecture <Behavioral>).
+Entity <Mux3> analyzed. Unit <Mux3> generated.
+
+Analyzing Entity <Registrador> in library <work> (Architecture <Behavioral>).
+Entity <Registrador> analyzed. Unit <Registrador> generated.
+
+Analyzing Entity <Mux> in library <work> (Architecture <Behavioral>).
+Entity <Mux> analyzed. Unit <Mux> generated.
+
+Analyzing Entity <RegistradorRDM> in library <work> (Architecture <Behavioral>).
+Entity <RegistradorRDM> analyzed. Unit <RegistradorRDM> generated.
+
+Analyzing Entity <Decoder> in library <work> (Architecture <Behavioral>).
+Entity <Decoder> analyzed. Unit <Decoder> generated.
+
+Analyzing Entity <ULA> in library <work> (Architecture <Behavioral>).
+Entity <ULA> analyzed. Unit <ULA> generated.
+
+Analyzing Entity <Reg2> in library <work> (Architecture <Behavioral>).
+Entity <Reg2> analyzed. Unit <Reg2> generated.
+
+Analyzing Entity <UnidadeControle> in library <work> (Architecture <Behavioral>).
+Entity <UnidadeControle> analyzed. Unit <UnidadeControle> generated.
 
 
 =========================================================================
@@ -147,30 +213,119 @@ Synthesizing Unit <DivFreq>.
 Unit <DivFreq> synthesized.
 
 
+Synthesizing Unit <Cont8>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/Cont8.vhd".
+    Found 8-bit up counter for signal <dado>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Cont8> synthesized.
+
+
+Synthesizing Unit <Mux3>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/Mux3.vhd".
+Unit <Mux3> synthesized.
+
+
+Synthesizing Unit <Registrador>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd".
+    Found 8-bit register for signal <Entrada>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <Registrador> synthesized.
+
+
+Synthesizing Unit <Mux>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/Mux.vhd".
+Unit <Mux> synthesized.
+
+
+Synthesizing Unit <RegistradorRDM>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/RegistradorRDM.vhd".
+    Found 8-bit register for signal <Entrada>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <RegistradorRDM> synthesized.
+
+
+Synthesizing Unit <Decoder>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd".
+    Found 1-of-16 decoder for signal <inst>.
+    Summary:
+	inferred   1 Decoder(s).
+Unit <Decoder> synthesized.
+
+
+Synthesizing Unit <ULA>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/ULA.vhd".
+    Found 8x8-bit multiplier for signal <mult>.
+    Found 8-bit addsub for signal <soma$addsub0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+Unit <ULA> synthesized.
+
+
+Synthesizing Unit <Reg2>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/Reg2.vhd".
+    Found 2-bit register for signal <dado>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <Reg2> synthesized.
+
+
+Synthesizing Unit <UnidadeControle>.
+    Related source file is "C:/Users/natal/Documents/GitHub/Neander/UnidadeControle.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 48                                             |
+    | Inputs             | 12                                             |
+    | Outputs            | 9                                              |
+    | Clock              | clkDiv                    (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <clkDiv>.
+    Found 32-bit up counter for signal <cont>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <UnidadeControle> synthesized.
+
+
 Synthesizing Unit <Neander>.
     Related source file is "C:/Users/natal/Documents/GitHub/Neander/Neander.vhd".
 WARNING:Xst:647 - Input <button_mem_inc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1306 - Output <an> is never assigned.
-WARNING:Xst:1306 - Output <power_on_LED> is never assigned.
-WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <button_mem_dec> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <button_data_inc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <button_data_dec> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <start_but> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <show_mem> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1306 - Output <display> is never assigned.
-WARNING:Xst:646 - Signal <clkKHz> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <opcode<3:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <Neander> synthesized.
 
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 1
- 32-bit up counter                                     : 1
-# Registers                                            : 1
- 1-bit register                                        : 1
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 1
+ 8-bit addsub                                          : 1
+# Counters                                             : 3
+ 32-bit up counter                                     : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 7
+ 1-bit register                                        : 2
+ 2-bit register                                        : 1
+ 8-bit register                                        : 4
+# Decoders                                             : 1
+ 1-of-16 decoder                                       : 1
 
 =========================================================================
 
@@ -178,37 +333,80 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <DIV_FREQ> is unconnected in block <Neander>.
-   It will be removed from the design.
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <UC/state/FSM> on signal <state[1:4]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 0000
+ s1    | 0001
+ s2    | 0011
+ s3    | 0010
+ s4    | 0110
+ s5    | 0111
+ s6    | 0101
+ s7    | 0100
+ s8    | 1100
+-------------------
+Reading core <ipcore_dir/Memoria.ngc>.
+Loading core <Memoria> for timing and area information for instance <BRAM>.
+WARNING:Xst:2677 - Node <Entrada_0> of sequential type is unconnected in block <RI>.
+WARNING:Xst:2677 - Node <Entrada_1> of sequential type is unconnected in block <RI>.
+WARNING:Xst:2677 - Node <Entrada_2> of sequential type is unconnected in block <RI>.
+WARNING:Xst:2677 - Node <Entrada_3> of sequential type is unconnected in block <RI>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 1
- 32-bit up counter                                     : 1
-# Registers                                            : 1
- Flip-Flops                                            : 1
+# FSMs                                                 : 1
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 1
+ 8-bit addsub                                          : 1
+# Counters                                             : 3
+ 32-bit up counter                                     : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 36
+ Flip-Flops                                            : 36
+# Decoders                                             : 1
+ 1-of-16 decoder                                       : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:2677 - Node <DIV_FREQ/clk_out> of sequential type is unconnected in block <Neander>.
 
 Optimizing unit <Neander> ...
 
+Optimizing unit <Registrador> ...
+
+Optimizing unit <RegistradorRDM> ...
+
+Optimizing unit <ULA> ...
+
+Optimizing unit <UnidadeControle> ...
+WARNING:Xst:2677 - Node <RI/Entrada_3> of sequential type is unconnected in block <Neander>.
+WARNING:Xst:2677 - Node <RI/Entrada_2> of sequential type is unconnected in block <Neander>.
+WARNING:Xst:2677 - Node <RI/Entrada_1> of sequential type is unconnected in block <Neander>.
+WARNING:Xst:2677 - Node <RI/Entrada_0> of sequential type is unconnected in block <Neander>.
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Neander, actual ratio is 0.
+INFO:Xst:2261 - The FF/Latch <NZ/dado_1> in Unit <Neander> is equivalent to the following FF/Latch, which will be removed : <AC/Entrada_7> 
+Found area constraint ratio of 100 (+ 5) on block Neander, actual ratio is 15.
+FlipFlop RI/Entrada_6 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 108
+ Flip-Flops                                            : 108
+
 =========================================================================
 
 =========================================================================
@@ -233,9 +431,38 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 20
+# IOs                              : 23
 
 Cell Usage :
+# BELS                             : 445
+#      GND                         : 2
+#      INV                         : 5
+#      LUT1                        : 69
+#      LUT2                        : 13
+#      LUT3                        : 21
+#      LUT3_L                      : 7
+#      LUT4                        : 106
+#      LUT4_D                      : 7
+#      LUT4_L                      : 1
+#      MUXCY                       : 92
+#      MUXF5                       : 32
+#      MUXF6                       : 8
+#      VCC                         : 2
+#      XORCY                       : 80
+# FlipFlops/Latches                : 108
+#      FDC                         : 4
+#      FDCE                        : 38
+#      FDR                         : 66
+# RAMS                             : 1
+#      RAMB16_S36_S36              : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 1
+#      OBUF                        : 17
+# MULTs                            : 1
+#      MULT18X18SIO                : 1
 =========================================================================
 
 Device utilization summary:
@@ -243,9 +470,14 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                        0  out of    960     0%  
- Number of IOs:                          20
- Number of bonded IOBs:                   0  out of     83     0%  
+ Number of Slices:                      123  out of    960    12%  
+ Number of Slice Flip Flops:            108  out of   1920     5%  
+ Number of 4 input LUTs:                229  out of   1920    11%  
+ Number of IOs:                          23
+ Number of bonded IOBs:                  19  out of     83    22%  
+ Number of BRAMs:                         1  out of      4    25%  
+ Number of MULT18X18SIOs:                 1  out of      4    25%  
+ Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
 Partition Resource Summary:
@@ -265,19 +497,30 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+DIV_FREQ/clk_out1                  | BUFG                   | 72    |
+clk                                | BUFGP                  | 33    |
+UC/clkDiv                          | NONE(UC/state_FSM_FFd4)| 4     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-No asynchronous control signals found in this design
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 42    |
+-----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: No path found
+   Minimum period: 12.825ns (Maximum Frequency: 77.973MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Maximum output required time after clock: 7.341ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -285,16 +528,144 @@ Timing Detail:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'DIV_FREQ/clk_out1'
+  Clock period: 12.825ns (frequency: 77.973MHz)
+  Total number of paths / destination ports: 14477 / 161
+-------------------------------------------------------------------------
+Delay:               12.825ns (Levels of Logic = 11)
+  Source:            RI/Entrada_6 (FF)
+  Destination:       NZ/dado_0 (FF)
+  Source Clock:      DIV_FREQ/clk_out1 rising
+  Destination Clock: DIV_FREQ/clk_out1 rising
+
+  Data Path: RI/Entrada_6 to NZ/dado_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            18   0.591   1.243  RI/Entrada_6 (RI/Entrada_6)
+     LUT4:I0->O            1   0.704   0.595  UC/selULA<2>_SW0_SW0 (N81)
+     LUT4:I0->O            1   0.704   0.000  UC/selULA<2>_F (N191)
+     MUXF5:I0->O          15   0.321   1.021  UC/selULA<2> (selULA<2>)
+     LUT4:I3->O            3   0.704   0.566  ULA/soma_mux00002 (ULA/soma_mux0000)
+     LUT3:I2->O            1   0.704   0.000  ULA/Maddsub_soma_addsub0000_lut<0> (ULA/Maddsub_soma_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  ULA/Maddsub_soma_addsub0000_cy<0> (ULA/Maddsub_soma_addsub0000_cy<0>)
+     XORCY:CI->O           2   0.804   0.447  ULA/Maddsub_soma_addsub0000_xor<1> (ULA/soma_addsub0000<1>)
+     MUXF5:S->O            1   0.739   0.000  ULA/soma<1>_f5 (ULA/soma<1>_f5)
+     MUXF6:I1->O           2   0.521   0.526  ULA/soma<1>_f6 (ULAout<1>)
+     LUT2:I1->O            1   0.704   0.455  ULA/NZ_0_cmp_eq00007 (ULA/NZ_0_cmp_eq00007)
+     LUT4:I2->O            1   0.704   0.000  ULA/NZ_0_cmp_eq000028 (NZin<0>)
+     FDCE:D                    0.308          NZ/dado_0
+    ----------------------------------------
+    Total                     12.825ns (7.972ns logic, 4.853ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.364ns (frequency: 157.146MHz)
+  Total number of paths / destination ports: 1584 / 65
+-------------------------------------------------------------------------
+Delay:               6.364ns (Levels of Logic = 10)
+  Source:            DIV_FREQ/cont_8 (FF)
+  Destination:       DIV_FREQ/clk_out (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: DIV_FREQ/cont_8 to DIV_FREQ/clk_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.622  DIV_FREQ/cont_8 (DIV_FREQ/cont_8)
+     LUT4:I0->O            1   0.704   0.000  DIV_FREQ/cont_cmp_eq0000_wg_lut<0> (DIV_FREQ/cont_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<0> (DIV_FREQ/cont_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<1> (DIV_FREQ/cont_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<2> (DIV_FREQ/cont_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<3> (DIV_FREQ/cont_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<4> (DIV_FREQ/cont_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<5> (DIV_FREQ/cont_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<6> (DIV_FREQ/cont_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          33   0.331   1.263  DIV_FREQ/cont_cmp_eq0000_wg_cy<7> (DIV_FREQ/cont_cmp_eq0000)
+     INV:I->O              1   0.704   0.420  DIV_FREQ/clk_out_not00011_INV_0 (DIV_FREQ/clk_out_not0001)
+     FDR:R                     0.911          DIV_FREQ/clk_out
+    ----------------------------------------
+    Total                      6.364ns (4.059ns logic, 2.305ns route)
+                                       (63.8% logic, 36.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'UC/clkDiv'
+  Clock period: 4.909ns (frequency: 203.707MHz)
+  Total number of paths / destination ports: 17 / 4
+-------------------------------------------------------------------------
+Delay:               4.909ns (Levels of Logic = 2)
+  Source:            UC/state_FSM_FFd4 (FF)
+  Destination:       UC/state_FSM_FFd1 (FF)
+  Source Clock:      UC/clkDiv rising
+  Destination Clock: UC/clkDiv rising
+
+  Data Path: UC/state_FSM_FFd4 to UC/state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             14   0.591   1.175  UC/state_FSM_FFd4 (UC/state_FSM_FFd4)
+     LUT4:I0->O           24   0.704   1.427  UC/state_FSM_FFd1-In11 (UC/state_cmp_eq0017)
+     LUT2:I0->O            2   0.704   0.000  UC/selRDM1 (selRDM)
+     FDC:D                     0.308          UC/state_FSM_FFd1
+    ----------------------------------------
+    Total                      4.909ns (2.307ns logic, 2.602ns route)
+                                       (47.0% logic, 53.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_FREQ/clk_out1'
+  Total number of paths / destination ports: 20 / 17
+-------------------------------------------------------------------------
+Offset:              7.278ns (Levels of Logic = 3)
+  Source:            RI/Entrada_7 (FF)
+  Destination:       halt (PAD)
+  Source Clock:      DIV_FREQ/clk_out1 rising
+
+  Data Path: RI/Entrada_7 to halt
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            21   0.591   1.163  RI/Entrada_7 (RI/Entrada_7)
+     LUT4:I2->O            1   0.704   0.424  UC/halt44_SW0_SW1 (N183)
+     LUT4:I3->O            1   0.704   0.420  UC/halt44 (halt_OBUF)
+     OBUF:I->O                 3.272          halt_OBUF (halt)
+    ----------------------------------------
+    Total                      7.278ns (5.271ns logic, 2.007ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'UC/clkDiv'
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Offset:              7.341ns (Levels of Logic = 3)
+  Source:            UC/state_FSM_FFd2 (FF)
+  Destination:       halt (PAD)
+  Source Clock:      UC/clkDiv rising
+
+  Data Path: UC/state_FSM_FFd2 to halt
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             17   0.591   1.226  UC/state_FSM_FFd2 (UC/state_FSM_FFd2)
+     LUT4:I0->O            1   0.704   0.424  UC/halt44_SW0_SW1 (N183)
+     LUT4:I3->O            1   0.704   0.420  UC/halt44 (halt_OBUF)
+     OBUF:I->O                 3.272          halt_OBUF (halt)
+    ----------------------------------------
+    Total                      7.341ns (5.271ns logic, 2.070ns route)
+                                       (71.8% logic, 28.2% route)
+
+=========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.38 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.67 secs
  
 --> 
 
-Total memory usage is 293660 kilobytes
+Total memory usage is 344300 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   13 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

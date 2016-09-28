@@ -1,6 +1,7 @@
 # Output products list for <Memoria>
 Memoria.asy
 Memoria.gise
+Memoria.mif
 Memoria.ngc
 Memoria.sym
 Memoria.vhd
@@ -53,4 +54,5 @@ Memoria\simulation\timing\wave_mti.do
 Memoria\simulation\timing\wave_ncsim.sv
 Memoria_flist.txt
 Memoria_xmdf.tcl
+_xmsgs\pn_parser.xmsgs
 summary.log
