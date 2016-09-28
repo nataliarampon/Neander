@@ -43,7 +43,7 @@ entity UnidadeControle is
            incPC : out  STD_LOGIC;
            sel : out  STD_LOGIC_VECTOR(1 downto 0);
            cargaREM : out  STD_LOGIC;
-           read_write: out std_logic;
+           read_write: out std_logic_vector(0 downto 0);
 		   halt : out STD_LOGIC;
 		   selRDM : out std_logic;
            cargaRDM : out  STD_LOGIC);
@@ -99,7 +99,7 @@ begin
 					next_state <= s1;
 				when s1 => 
 					cargaREM <= '0';
-					read_write <= '0';
+					read_write <= "0";
 					incPC <= '1';
 					next_state <= s2;
 				when s2 =>
@@ -173,53 +173,53 @@ begin
 				when s4 => case decoder is
 								 when "0000000000000010" => --sta
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									incPC <= '1';
 									next_state <= s5;
 								 when "0000000000000100" => -- lda
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									incPC <= '1';
 									next_state <= s5;
 								 when "0000000000001000" => --add
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									incPC <= '1';
 									next_state <= s5;
 								 when "0000000000010000" => --or
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									incPC <= '1';
 									next_state <= s5;
 								 when "0000000000100000" => --and
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									incPC <= '1';
 									next_state <= s5;
 								 when "0000000100000000" => --jmp
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									next_state <= s5;
 								 when "0000001000000000" => --jn
 									if(N = '1') then
 										cargaREM <= '0';
-										read_write <= '0';
+										read_write <= "0";
 										next_state <= s5;
 									end if;
 								 when "0000010000000000" => --jz
 									if(Z = '1') then
 										cargaREM <= '0';
-										read_write <= '0';
+										read_write <= "0";
 										next_state <= s5;
 									end if;
 								 when "0000100000000000" => --sub
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									incPC <= '1';
 									next_state <= s5;
 								 when "0001000000000000" => --mul
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									incPC <= '1';
 									next_state <= s5;
 								 when others =>
@@ -284,27 +284,27 @@ begin
 									next_state <= s7;
 								 when "0000000000000100" => --lda
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									next_state <= s7;
 								 when "0000000000001000" => --add
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									next_state <= s7;
 								 when "0000000000010000" => --or
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									next_state <= s7;
 								 when "0000000000100000" => --and
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									next_state <= s7;
 								 when "0000100000000000" => --sub
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									next_state <= s7;
 								 when "0001000000000000" => --mul
 									cargaREM <= '0';
-									read_write <= '0';
+									read_write <= "0";
 									next_state <= s7;
 								 when others =>
 									cargaPC <= '0';
@@ -312,7 +312,7 @@ begin
 				when s7 => case decoder is
 								 when "0000000000000010" => --sta
 									cargaRDM <= '0';
-									read_write <= '1';
+									read_write <= "1";
 									next_state <= s0;
 								 when "0000000000000100" => --lda
 									selULA <= "100";
@@ -353,7 +353,7 @@ begin
 					when s8 => 
 						case decoder is
 							when "0001000000000000" =>
-								read_write <= '1';
+								read_write <= "1";
 								next_state <= s0;
 							when others => 
 								cargaAC <= '0';

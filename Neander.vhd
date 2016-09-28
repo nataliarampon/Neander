@@ -59,7 +59,8 @@ architecture Behavioral of Neander is
 		  );
 	END COMPONENT;
 		
-		signal clkKHz, cargaPC, cargaREM, cargaRI, cargaNZ, cargaAC, cargaRDM, incPC, write_read, selRDM : std_logic;
+		signal clkKHz, cargaPC, cargaREM, cargaRI, cargaNZ, cargaAC, cargaRDM, incPC, selRDM : std_logic;
+		signal write_read : std_logic_vector(0 downto 0);
 		signal selREM, NZout, NZin : std_logic_vector(1 downto 0);
 		signal selULA : std_logic_vector(2 downto 0);
 		signal ULAout, opcode, PCout, ACout, RDMout, REMout, Ramout, mult, MUX3out, MUX2out : std_logic_vector(7 downto 0);
@@ -99,7 +100,7 @@ begin
     dina => RDMout,
     douta => RAMout,
     clkb => clkKHz,
-    web => '0',
+    web => "0",
     addrb => REMout,
     dinb => "00000000",
     doutb => mem

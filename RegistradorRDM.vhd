@@ -33,7 +33,7 @@ entity RegistradorRDM is
     Port ( clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
            Carga : in  STD_LOGIC;
-           RD : in  STD_LOGIC;
+           RD : in  STD_LOGIC_vector(0 downto 0);
            A : in  STD_LOGIC_VECTOR (7 downto 0);
            B : in  STD_LOGIC_VECTOR (7 downto 0);
            S : out  STD_LOGIC_VECTOR (7 downto 0));
@@ -49,7 +49,7 @@ begin
 		elsif(clk'event and clk='1') then
 			if(Carga = '1') then
 				Entrada <= A;
-			elsif(RD = '0') then
+			elsif(RD = "0") then
 				Entrada <= B;
 			end if;
 		end if;
