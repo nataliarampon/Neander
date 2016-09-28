@@ -40,6 +40,7 @@ end Reg2;
 architecture Behavioral of Reg2 is
 
 	signal dado : std_logic_vector(1 downto 0);
+	signal cargaAnt : std_logic;
 
 begin
 	process(clk, reset)
@@ -48,7 +49,12 @@ begin
 			dado <= "00";
 		elsif(clk'event and clk='1') then
 			if(carga = '1') then
-				dado <= NZ;
+				if(cargaAnt = '0') then
+					dado <= NZ;
+					cargaAnt <= '1';
+				else
+					cargaAnt <= '0';
+				end if;
 			end if;
 		end if;
 	end process;

@@ -3,27 +3,27 @@ FL C:/Users/leodo/Documents/GitHub/Neander/UnidadeControle.vhd 2016/09/18.20:35:
 FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Cont8.vhd" 2016/09/14.22:32:15 P.20131013
 FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Decoder.vhd" 2016/09/14.22:20:03 P.20131013
 FL "C:/Users/natal/Documents/Faculdade/4 Semestre/Sistemas Digitais/Neander/Reg2.vhd" 2016/09/14.22:35:27 P.20131013
-FL C:/Users/natal/Documents/GitHub/Neander/Cont8.vhd 2016/09/14.22:32:15 P.20131013
-EN work/Cont8 1475028344 FL C:/Users/natal/Documents/GitHub/Neander/Cont8.vhd \
+FL C:/Users/natal/Documents/GitHub/Neander/Cont8.vhd 2016/09/28.00:56:11 P.20131013
+EN work/Cont8 1475035027 FL C:/Users/natal/Documents/GitHub/Neander/Cont8.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/Cont8/Behavioral 1475028345 \
-      FL C:/Users/natal/Documents/GitHub/Neander/Cont8.vhd EN work/Cont8 1475028344
+AR work/Cont8/Behavioral 1475035028 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Cont8.vhd EN work/Cont8 1475035027
 FL C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd 2016/09/18.19:05:19 P.20131013
-EN work/Decoder 1475028356 FL C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd \
+EN work/Decoder 1475035039 FL C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Decoder/Behavioral 1475028357 \
-      FL C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd EN work/Decoder 1475028356
+AR work/Decoder/Behavioral 1475035040 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd EN work/Decoder 1475035039
 FL C:/Users/natal/Documents/GitHub/Neander/Decoder3.vhd 2016/09/18.19:03:18 P.20131013
 EN work/Decoder3 1474725220 \
       FL C:/Users/natal/Documents/GitHub/Neander/Decoder3.vhd \
       PB ieee/std_logic_1164 1381692176
 AR work/Decoder3/Behavioral 1474725221 \
       FL C:/Users/natal/Documents/GitHub/Neander/Decoder3.vhd EN work/Decoder3 1474725220
-FL C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd 2016/09/26.22:47:14 P.20131013
-EN work/DivFreq 1475028342 FL C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd \
+FL C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd 2016/09/27.23:31:14 P.20131013
+EN work/DivFreq 1475035025 FL C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/DivFreq/Behavioral 1475028343 \
-      FL C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd EN work/DivFreq 1475028342
+AR work/DivFreq/Behavioral 1475035026 \
+      FL C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd EN work/DivFreq 1475035025
 FL C:/Users/natal/Documents/GitHub/Neander/FlipFlopJK.vhd 2016/09/18.18:39:30 P.20131013
 EN work/FlipFlopJK 1474725218 \
       FL C:/Users/natal/Documents/GitHub/Neander/FlipFlopJK.vhd \
@@ -38,50 +38,50 @@ EN work/GeradorTempos 1474725222 \
 AR work/GeradorTempos/Behavioral 1474725223 \
       FL C:/Users/natal/Documents/GitHub/Neander/GeradorTempos.vhd \
       EN work/GeradorTempos 1474725222 CP work/FlipFlopJK CP work/Decoder3
-FL C:/Users/natal/Documents/GitHub/Neander/ipcore_dir/Memoria.vhd 2016/09/27.22:57:41 P.20131013
-EN work/Memoria 1475028350 \
+FL C:/Users/natal/Documents/GitHub/Neander/ipcore_dir/Memoria.vhd 2016/09/27.23:19:47 P.20131013
+EN work/Memoria 1475035033 \
       FL C:/Users/natal/Documents/GitHub/Neander/ipcore_dir/Memoria.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Memoria/Memoria_a 1475028351 \
+AR work/Memoria/Memoria_a 1475035034 \
       FL C:/Users/natal/Documents/GitHub/Neander/ipcore_dir/Memoria.vhd \
-      EN work/Memoria 1475028350
+      EN work/Memoria 1475035033
 FL C:/Users/natal/Documents/GitHub/Neander/Mux.vhd 2016/09/18.18:13:23 P.20131013
-EN work/Mux 1475028352 FL C:/Users/natal/Documents/GitHub/Neander/Mux.vhd \
+EN work/Mux 1475035035 FL C:/Users/natal/Documents/GitHub/Neander/Mux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Mux/Behavioral 1475028353 \
-      FL C:/Users/natal/Documents/GitHub/Neander/Mux.vhd EN work/Mux 1475028352
+AR work/Mux/Behavioral 1475035036 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Mux.vhd EN work/Mux 1475035035
 FL C:/Users/natal/Documents/GitHub/Neander/Mux3.vhd 2016/09/26.23:39:34 P.20131013
-EN work/Mux3 1475028346 FL C:/Users/natal/Documents/GitHub/Neander/Mux3.vhd \
+EN work/Mux3 1475035029 FL C:/Users/natal/Documents/GitHub/Neander/Mux3.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Mux3/Behavioral 1475028347 \
-      FL C:/Users/natal/Documents/GitHub/Neander/Mux3.vhd EN work/Mux3 1475028346
+AR work/Mux3/Behavioral 1475035030 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Mux3.vhd EN work/Mux3 1475035029
 FL C:/Users/natal/Documents/GitHub/Neander/Neander.vhd 2016/09/27.23:05:39 P.20131013
-EN work/Neander 1475028364 FL C:/Users/natal/Documents/GitHub/Neander/Neander.vhd \
+EN work/Neander 1475035047 FL C:/Users/natal/Documents/GitHub/Neander/Neander.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Neander/Behavioral 1475028365 \
-      FL C:/Users/natal/Documents/GitHub/Neander/Neander.vhd EN work/Neander 1475028364 \
+AR work/Neander/Behavioral 1475035048 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Neander.vhd EN work/Neander 1475035047 \
       CP work/DivFreq CP work/Cont8 CP work/Mux3 CP work/Registrador CP Memoria \
       CP work/Mux CP work/RegistradorRDM CP work/Decoder CP work/ULA CP work/Reg2 \
       CP work/UnidadeControle
-FL C:/Users/natal/Documents/GitHub/Neander/Reg2.vhd 2016/09/14.22:35:27 P.20131013
-EN work/Reg2 1475028360 FL C:/Users/natal/Documents/GitHub/Neander/Reg2.vhd \
+FL C:/Users/natal/Documents/GitHub/Neander/Reg2.vhd 2016/09/28.00:56:53 P.20131013
+EN work/Reg2 1475035043 FL C:/Users/natal/Documents/GitHub/Neander/Reg2.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Reg2/Behavioral 1475028361 \
-      FL C:/Users/natal/Documents/GitHub/Neander/Reg2.vhd EN work/Reg2 1475028360
-FL C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd 2016/09/18.18:12:02 P.20131013
-EN work/Registrador 1475028348 \
+AR work/Reg2/Behavioral 1475035044 \
+      FL C:/Users/natal/Documents/GitHub/Neander/Reg2.vhd EN work/Reg2 1475035043
+FL C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd 2016/09/28.00:56:23 P.20131013
+EN work/Registrador 1475035031 \
       FL C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Registrador/Behavioral 1475028349 \
+AR work/Registrador/Behavioral 1475035032 \
       FL C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd \
-      EN work/Registrador 1475028348
-FL C:/Users/natal/Documents/GitHub/Neander/RegistradorRDM.vhd 2016/09/27.22:35:45 P.20131013
-EN work/RegistradorRDM 1475028354 \
+      EN work/Registrador 1475035031
+FL C:/Users/natal/Documents/GitHub/Neander/RegistradorRDM.vhd 2016/09/28.00:56:35 P.20131013
+EN work/RegistradorRDM 1475035037 \
       FL C:/Users/natal/Documents/GitHub/Neander/RegistradorRDM.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/RegistradorRDM/Behavioral 1475028355 \
+AR work/RegistradorRDM/Behavioral 1475035038 \
       FL C:/Users/natal/Documents/GitHub/Neander/RegistradorRDM.vhd \
-      EN work/RegistradorRDM 1475028354
+      EN work/RegistradorRDM 1475035037
 FL C:/Users/natal/Documents/GitHub/Neander/UC.vhd 2016/09/24.17:50:52 P.20131013
 EN work/UC 0 FL C:/Users/natal/Documents/GitHub/Neander/UC.vhd \
       PB ieee/std_logic_1164 1381692176
@@ -89,14 +89,14 @@ AR work/UC/behavior 0 \
       FL C:/Users/natal/Documents/GitHub/Neander/UC.vhd EN work/UC 0 \
       CP UnidadeControle
 FL C:/Users/natal/Documents/GitHub/Neander/ULA.vhd 2016/09/26.20:25:40 P.20131013
-EN work/ULA 1475028358 FL C:/Users/natal/Documents/GitHub/Neander/ULA.vhd \
+EN work/ULA 1475035041 FL C:/Users/natal/Documents/GitHub/Neander/ULA.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/ULA/Behavioral 1475028359 \
-      FL C:/Users/natal/Documents/GitHub/Neander/ULA.vhd EN work/ULA 1475028358
-FL C:/Users/natal/Documents/GitHub/Neander/UnidadeControle.vhd 2016/09/27.22:46:34 P.20131013
-EN work/UnidadeControle 1475028362 \
+AR work/ULA/Behavioral 1475035042 \
+      FL C:/Users/natal/Documents/GitHub/Neander/ULA.vhd EN work/ULA 1475035041
+FL C:/Users/natal/Documents/GitHub/Neander/UnidadeControle.vhd 2016/09/28.00:14:17 P.20131013
+EN work/UnidadeControle 1475035045 \
       FL C:/Users/natal/Documents/GitHub/Neander/UnidadeControle.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/UnidadeControle/Behavioral 1475028363 \
+AR work/UnidadeControle/Behavioral 1475035046 \
       FL C:/Users/natal/Documents/GitHub/Neander/UnidadeControle.vhd \
-      EN work/UnidadeControle 1475028362
+      EN work/UnidadeControle 1475035045

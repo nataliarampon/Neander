@@ -101,7 +101,10 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 100 ns;	
 
+		reset <= '1';
 		
+		wait for clk_period;
+		reset <= '0';
 
       -- insert stimulus here 
 

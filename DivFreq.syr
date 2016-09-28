@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: DivFreq.prj
 
@@ -109,18 +109,18 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd" in Library work.
 Entity <divfreq> compiled.
-Entity <DivFreq> (Architecture <Behavioral>) compiled.
+Entity <divfreq> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <DivFreq> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <DivFreq> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <DivFreq> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <DivFreq> in library <work> (Architecture <behavioral>).
 Entity <DivFreq> analyzed. Unit <DivFreq> generated.
 
 
@@ -132,7 +132,7 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <DivFreq>.
     Related source file is "C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd".
-    Found 1-bit register for signal <clk_out>.
+    Found 1-bit register for signal <clock>.
     Found 32-bit up counter for signal <cont>.
     Summary:
 	inferred   1 Counter(s).
@@ -222,7 +222,8 @@ Cell Usage :
 #      VCC                         : 1
 #      XORCY                       : 32
 # FlipFlops/Latches                : 33
-#      FDR                         : 33
+#      FDE                         : 1
+#      FDR                         : 32
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 1
@@ -234,7 +235,7 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       22  out of    960     2%  
+ Number of Slices:                       21  out of    960     2%  
  Number of Slice Flip Flops:             33  out of   1920     1%  
  Number of 4 input LUTs:                 41  out of   1920     2%  
  Number of IOs:                           2
@@ -273,9 +274,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 6.364ns (Maximum Frequency: 157.146MHz)
+   Minimum period: 5.240ns (Maximum Frequency: 190.857MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 4.283ns
+   Maximum output required time after clock: 4.310ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -284,63 +285,62 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.364ns (frequency: 157.146MHz)
-  Total number of paths / destination ports: 1584 / 65
+  Clock period: 5.240ns (frequency: 190.857MHz)
+  Total number of paths / destination ports: 1585 / 66
 -------------------------------------------------------------------------
-Delay:               6.364ns (Levels of Logic = 10)
+Delay:               5.240ns (Levels of Logic = 9)
   Source:            cont_8 (FF)
-  Destination:       clk_out (FF)
+  Destination:       cont_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: cont_8 to clk_out
+  Data Path: cont_8 to cont_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              2   0.591   0.622  cont_8 (cont_8)
-     LUT4:I0->O            1   0.704   0.000  cont_cmp_eq0000_wg_lut<0> (cont_cmp_eq0000_wg_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  cont_cmp_eq0000_wg_cy<0> (cont_cmp_eq0000_wg_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<1> (cont_cmp_eq0000_wg_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<2> (cont_cmp_eq0000_wg_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<3> (cont_cmp_eq0000_wg_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<4> (cont_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<5> (cont_cmp_eq0000_wg_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  cont_cmp_eq0000_wg_cy<6> (cont_cmp_eq0000_wg_cy<6>)
-     MUXCY:CI->O          33   0.331   1.263  cont_cmp_eq0000_wg_cy<7> (cont_cmp_eq0000)
-     INV:I->O              1   0.704   0.420  clk_out_not00011_INV_0 (clk_out_not0001)
-     FDR:R                     0.911          clk_out
+     LUT4:I0->O            1   0.704   0.000  clock_cmp_eq0000_wg_lut<0> (clock_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  clock_cmp_eq0000_wg_cy<0> (clock_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  clock_cmp_eq0000_wg_cy<1> (clock_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  clock_cmp_eq0000_wg_cy<2> (clock_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  clock_cmp_eq0000_wg_cy<3> (clock_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  clock_cmp_eq0000_wg_cy<4> (clock_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  clock_cmp_eq0000_wg_cy<5> (clock_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  clock_cmp_eq0000_wg_cy<6> (clock_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          33   0.331   1.263  clock_cmp_eq0000_wg_cy<7> (clock_cmp_eq0000)
+     FDR:R                     0.911          cont_0
     ----------------------------------------
-    Total                      6.364ns (4.059ns logic, 2.305ns route)
-                                       (63.8% logic, 36.2% route)
+    Total                      5.240ns (3.355ns logic, 1.885ns route)
+                                       (64.0% logic, 36.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              4.283ns (Levels of Logic = 1)
-  Source:            clk_out (FF)
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            clock (FF)
   Destination:       clk_out (PAD)
   Source Clock:      clk rising
 
-  Data Path: clk_out to clk_out
+  Data Path: clock to clk_out
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              1   0.591   0.420  clk_out (clk_out_OBUF)
+     FDE:C->Q              2   0.591   0.447  clock (clock)
      OBUF:I->O                 3.272          clk_out_OBUF (clk_out)
     ----------------------------------------
-    Total                      4.283ns (3.863ns logic, 0.420ns route)
-                                       (90.2% logic, 9.8% route)
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.76 secs
+Total CPU time to Xst completion: 4.70 secs
  
 --> 
 
-Total memory usage is 293644 kilobytes
+Total memory usage is 293632 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

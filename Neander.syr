@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: Neander.prj
 
@@ -110,28 +110,31 @@ Cores Search Directories           : {"ipcore_dir"  }
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd" in Library work.
 Architecture behavioral of Entity divfreq is up to date.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Cont8.vhd" in Library work.
-Architecture behavioral of Entity cont8 is up to date.
+Entity <cont8> compiled.
+Entity <cont8> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Mux3.vhd" in Library work.
 Architecture behavioral of Entity mux3 is up to date.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd" in Library work.
-Architecture behavioral of Entity registrador is up to date.
+Entity <registrador> compiled.
+Entity <registrador> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/ipcore_dir/Memoria.vhd" in Library work.
 Architecture memoria_a of Entity memoria is up to date.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Mux.vhd" in Library work.
 Architecture behavioral of Entity mux is up to date.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/RegistradorRDM.vhd" in Library work.
-Architecture behavioral of Entity registradorrdm is up to date.
+Entity <registradorrdm> compiled.
+Entity <registradorrdm> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Decoder.vhd" in Library work.
 Architecture behavioral of Entity decoder is up to date.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/ULA.vhd" in Library work.
 Architecture behavioral of Entity ula is up to date.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Reg2.vhd" in Library work.
-Architecture behavioral of Entity reg2 is up to date.
+Entity <reg2> compiled.
+Entity <reg2> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/UnidadeControle.vhd" in Library work.
 Architecture behavioral of Entity unidadecontrole is up to date.
 Compiling vhdl file "C:/Users/natal/Documents/GitHub/Neander/Neander.vhd" in Library work.
-Entity <neander> compiled.
-Entity <neander> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity neander is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -205,7 +208,7 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <DivFreq>.
     Related source file is "C:/Users/natal/Documents/GitHub/Neander/DivFreq.vhd".
-    Found 1-bit register for signal <clk_out>.
+    Found 1-bit register for signal <clock>.
     Found 32-bit up counter for signal <cont>.
     Summary:
 	inferred   1 Counter(s).
@@ -215,9 +218,12 @@ Unit <DivFreq> synthesized.
 
 Synthesizing Unit <Cont8>.
     Related source file is "C:/Users/natal/Documents/GitHub/Neander/Cont8.vhd".
+    Found 1-bit register for signal <cargaAnt>.
     Found 8-bit up counter for signal <dado>.
+    Found 1-bit register for signal <incAnt>.
     Summary:
 	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
 Unit <Cont8> synthesized.
 
 
@@ -228,9 +234,10 @@ Unit <Mux3> synthesized.
 
 Synthesizing Unit <Registrador>.
     Related source file is "C:/Users/natal/Documents/GitHub/Neander/Registrador.vhd".
+    Found 1-bit register for signal <cargaAnt>.
     Found 8-bit register for signal <Entrada>.
     Summary:
-	inferred   8 D-type flip-flop(s).
+	inferred   9 D-type flip-flop(s).
 Unit <Registrador> synthesized.
 
 
@@ -241,9 +248,11 @@ Unit <Mux> synthesized.
 
 Synthesizing Unit <RegistradorRDM>.
     Related source file is "C:/Users/natal/Documents/GitHub/Neander/RegistradorRDM.vhd".
+    Found 1-bit register for signal <cargaAnt>.
     Found 8-bit register for signal <Entrada>.
+    Found 1-bit register for signal <RDant>.
     Summary:
-	inferred   8 D-type flip-flop(s).
+	inferred  10 D-type flip-flop(s).
 Unit <RegistradorRDM> synthesized.
 
 
@@ -267,9 +276,10 @@ Unit <ULA> synthesized.
 
 Synthesizing Unit <Reg2>.
     Related source file is "C:/Users/natal/Documents/GitHub/Neander/Reg2.vhd".
+    Found 1-bit register for signal <cargaAnt>.
     Found 2-bit register for signal <dado>.
     Summary:
-	inferred   2 D-type flip-flop(s).
+	inferred   3 D-type flip-flop(s).
 Unit <Reg2> synthesized.
 
 
@@ -320,8 +330,8 @@ Macro Statistics
 # Counters                                             : 3
  32-bit up counter                                     : 2
  8-bit up counter                                      : 1
-# Registers                                            : 7
- 1-bit register                                        : 2
+# Registers                                            : 15
+ 1-bit register                                        : 10
  2-bit register                                        : 1
  8-bit register                                        : 4
 # Decoders                                             : 1
@@ -367,8 +377,8 @@ Macro Statistics
 # Counters                                             : 3
  32-bit up counter                                     : 2
  8-bit up counter                                      : 1
-# Registers                                            : 36
- Flip-Flops                                            : 36
+# Registers                                            : 44
+ Flip-Flops                                            : 44
 # Decoders                                             : 1
  1-of-16 decoder                                       : 1
 
@@ -379,6 +389,8 @@ Macro Statistics
 =========================================================================
 
 Optimizing unit <Neander> ...
+
+Optimizing unit <Cont8> ...
 
 Optimizing unit <Registrador> ...
 
@@ -394,8 +406,8 @@ WARNING:Xst:2677 - Node <RI/Entrada_0> of sequential type is unconnected in bloc
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <NZ/dado_1> in Unit <Neander> is equivalent to the following FF/Latch, which will be removed : <AC/Entrada_7> 
 Found area constraint ratio of 100 (+ 5) on block Neander, actual ratio is 15.
+FlipFlop RI/Entrada_5 has been replicated 1 time(s)
 FlipFlop RI/Entrada_6 has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -404,8 +416,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 108
- Flip-Flops                                            : 108
+# Registers                                            : 118
+ Flip-Flops                                            : 118
 
 =========================================================================
 
@@ -434,25 +446,28 @@ Design Statistics
 # IOs                              : 23
 
 Cell Usage :
-# BELS                             : 445
+# BELS                             : 462
 #      GND                         : 2
-#      INV                         : 5
+#      INV                         : 13
 #      LUT1                        : 69
-#      LUT2                        : 13
-#      LUT3                        : 21
+#      LUT2                        : 20
+#      LUT2_L                      : 1
+#      LUT3                        : 18
+#      LUT3_D                      : 1
 #      LUT3_L                      : 7
 #      LUT4                        : 106
-#      LUT4_D                      : 7
-#      LUT4_L                      : 1
+#      LUT4_D                      : 11
+#      LUT4_L                      : 2
 #      MUXCY                       : 92
-#      MUXF5                       : 32
+#      MUXF5                       : 30
 #      MUXF6                       : 8
 #      VCC                         : 2
 #      XORCY                       : 80
-# FlipFlops/Latches                : 108
+# FlipFlops/Latches                : 118
 #      FDC                         : 4
-#      FDCE                        : 38
-#      FDR                         : 66
+#      FDCE                        : 40
+#      FDE                         : 9
+#      FDR                         : 65
 # RAMS                             : 1
 #      RAMB16_S36_S36              : 1
 # Clock Buffers                    : 2
@@ -470,9 +485,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                      123  out of    960    12%  
- Number of Slice Flip Flops:            108  out of   1920     5%  
- Number of 4 input LUTs:                229  out of   1920    11%  
+ Number of Slices:                      128  out of    960    13%  
+ Number of Slice Flip Flops:            118  out of   1920     6%  
+ Number of 4 input LUTs:                248  out of   1920    12%  
  Number of IOs:                          23
  Number of bonded IOBs:                  19  out of     83    22%  
  Number of BRAMs:                         1  out of      4    25%  
@@ -500,7 +515,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-DIV_FREQ/clk_out1                  | BUFG                   | 72    |
+DIV_FREQ/clock1                    | BUFG                   | 82    |
 clk                                | BUFGP                  | 33    |
 UC/clkDiv                          | NONE(UC/state_FSM_FFd4)| 4     |
 -----------------------------------+------------------------+-------+
@@ -511,16 +526,16 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-reset                              | IBUF                   | 42    |
+reset                              | IBUF                   | 44    |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 12.825ns (Maximum Frequency: 77.973MHz)
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 7.341ns
+   Minimum period: 11.697ns (Maximum Frequency: 85.492MHz)
+   Minimum input arrival time before clock: 4.340ns
+   Maximum output required time after clock: 7.307ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -528,25 +543,24 @@ Timing Detail:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'DIV_FREQ/clk_out1'
-  Clock period: 12.825ns (frequency: 77.973MHz)
-  Total number of paths / destination ports: 14477 / 161
+Timing constraint: Default period analysis for Clock 'DIV_FREQ/clock1'
+  Clock period: 11.697ns (frequency: 85.492MHz)
+  Total number of paths / destination ports: 11304 / 185
 -------------------------------------------------------------------------
-Delay:               12.825ns (Levels of Logic = 11)
-  Source:            RI/Entrada_6 (FF)
+Delay:               11.697ns (Levels of Logic = 10)
+  Source:            RI/Entrada_7 (FF)
   Destination:       NZ/dado_0 (FF)
-  Source Clock:      DIV_FREQ/clk_out1 rising
-  Destination Clock: DIV_FREQ/clk_out1 rising
+  Source Clock:      DIV_FREQ/clock1 rising
+  Destination Clock: DIV_FREQ/clock1 rising
 
-  Data Path: RI/Entrada_6 to NZ/dado_0
+  Data Path: RI/Entrada_7 to NZ/dado_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            18   0.591   1.243  RI/Entrada_6 (RI/Entrada_6)
-     LUT4:I0->O            1   0.704   0.595  UC/selULA<2>_SW0_SW0 (N81)
-     LUT4:I0->O            1   0.704   0.000  UC/selULA<2>_F (N191)
-     MUXF5:I0->O          15   0.321   1.021  UC/selULA<2> (selULA<2>)
-     LUT4:I3->O            3   0.704   0.566  ULA/soma_mux00002 (ULA/soma_mux0000)
+     FDCE:C->Q            18   0.591   1.243  RI/Entrada_7 (RI/Entrada_7)
+     LUT4:I0->O            1   0.704   0.000  UC/selULA<2>_G (N178)
+     MUXF5:I1->O          15   0.321   1.192  UC/selULA<2> (selULA<2>)
+     LUT4:I0->O            3   0.704   0.566  ULA/soma_mux00002 (ULA/soma_mux0000)
      LUT3:I2->O            1   0.704   0.000  ULA/Maddsub_soma_addsub0000_lut<0> (ULA/Maddsub_soma_addsub0000_lut<0>)
      MUXCY:S->O            1   0.464   0.000  ULA/Maddsub_soma_addsub0000_cy<0> (ULA/Maddsub_soma_addsub0000_cy<0>)
      XORCY:CI->O           2   0.804   0.447  ULA/Maddsub_soma_addsub0000_xor<1> (ULA/soma_addsub0000<1>)
@@ -556,46 +570,45 @@ Delay:               12.825ns (Levels of Logic = 11)
      LUT4:I2->O            1   0.704   0.000  ULA/NZ_0_cmp_eq000028 (NZin<0>)
      FDCE:D                    0.308          NZ/dado_0
     ----------------------------------------
-    Total                     12.825ns (7.972ns logic, 4.853ns route)
-                                       (62.2% logic, 37.8% route)
+    Total                     11.697ns (7.268ns logic, 4.429ns route)
+                                       (62.1% logic, 37.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.364ns (frequency: 157.146MHz)
-  Total number of paths / destination ports: 1584 / 65
+  Clock period: 5.240ns (frequency: 190.857MHz)
+  Total number of paths / destination ports: 1585 / 66
 -------------------------------------------------------------------------
-Delay:               6.364ns (Levels of Logic = 10)
+Delay:               5.240ns (Levels of Logic = 9)
   Source:            DIV_FREQ/cont_8 (FF)
-  Destination:       DIV_FREQ/clk_out (FF)
+  Destination:       DIV_FREQ/cont_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: DIV_FREQ/cont_8 to DIV_FREQ/clk_out
+  Data Path: DIV_FREQ/cont_8 to DIV_FREQ/cont_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              2   0.591   0.622  DIV_FREQ/cont_8 (DIV_FREQ/cont_8)
-     LUT4:I0->O            1   0.704   0.000  DIV_FREQ/cont_cmp_eq0000_wg_lut<0> (DIV_FREQ/cont_cmp_eq0000_wg_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<0> (DIV_FREQ/cont_cmp_eq0000_wg_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<1> (DIV_FREQ/cont_cmp_eq0000_wg_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<2> (DIV_FREQ/cont_cmp_eq0000_wg_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<3> (DIV_FREQ/cont_cmp_eq0000_wg_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<4> (DIV_FREQ/cont_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<5> (DIV_FREQ/cont_cmp_eq0000_wg_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/cont_cmp_eq0000_wg_cy<6> (DIV_FREQ/cont_cmp_eq0000_wg_cy<6>)
-     MUXCY:CI->O          33   0.331   1.263  DIV_FREQ/cont_cmp_eq0000_wg_cy<7> (DIV_FREQ/cont_cmp_eq0000)
-     INV:I->O              1   0.704   0.420  DIV_FREQ/clk_out_not00011_INV_0 (DIV_FREQ/clk_out_not0001)
-     FDR:R                     0.911          DIV_FREQ/clk_out
+     LUT4:I0->O            1   0.704   0.000  DIV_FREQ/clock_cmp_eq0000_wg_lut<0> (DIV_FREQ/clock_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  DIV_FREQ/clock_cmp_eq0000_wg_cy<0> (DIV_FREQ/clock_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/clock_cmp_eq0000_wg_cy<1> (DIV_FREQ/clock_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/clock_cmp_eq0000_wg_cy<2> (DIV_FREQ/clock_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/clock_cmp_eq0000_wg_cy<3> (DIV_FREQ/clock_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/clock_cmp_eq0000_wg_cy<4> (DIV_FREQ/clock_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/clock_cmp_eq0000_wg_cy<5> (DIV_FREQ/clock_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  DIV_FREQ/clock_cmp_eq0000_wg_cy<6> (DIV_FREQ/clock_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          33   0.331   1.263  DIV_FREQ/clock_cmp_eq0000_wg_cy<7> (DIV_FREQ/clock_cmp_eq0000)
+     FDR:R                     0.911          DIV_FREQ/cont_0
     ----------------------------------------
-    Total                      6.364ns (4.059ns logic, 2.305ns route)
-                                       (63.8% logic, 36.2% route)
+    Total                      5.240ns (3.355ns logic, 1.885ns route)
+                                       (64.0% logic, 36.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'UC/clkDiv'
-  Clock period: 4.909ns (frequency: 203.707MHz)
+  Clock period: 4.934ns (frequency: 202.675MHz)
   Total number of paths / destination ports: 17 / 4
 -------------------------------------------------------------------------
-Delay:               4.909ns (Levels of Logic = 2)
+Delay:               4.934ns (Levels of Logic = 2)
   Source:            UC/state_FSM_FFd4 (FF)
   Destination:       UC/state_FSM_FFd1 (FF)
   Source Clock:      UC/clkDiv rising
@@ -605,67 +618,87 @@ Delay:               4.909ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             14   0.591   1.175  UC/state_FSM_FFd4 (UC/state_FSM_FFd4)
-     LUT4:I0->O           24   0.704   1.427  UC/state_FSM_FFd1-In11 (UC/state_cmp_eq0017)
+     FDC:C->Q             15   0.591   1.192  UC/state_FSM_FFd4 (UC/state_FSM_FFd4)
+     LUT4:I0->O           25   0.704   1.435  UC/state_FSM_FFd1-In11 (UC/state_cmp_eq0017)
      LUT2:I0->O            2   0.704   0.000  UC/selRDM1 (selRDM)
      FDC:D                     0.308          UC/state_FSM_FFd1
     ----------------------------------------
-    Total                      4.909ns (2.307ns logic, 2.602ns route)
-                                       (47.0% logic, 53.0% route)
+    Total                      4.934ns (2.307ns logic, 2.627ns route)
+                                       (46.8% logic, 53.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_FREQ/clk_out1'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DIV_FREQ/clock1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.340ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       PC/incAnt (FF)
+  Destination Clock: DIV_FREQ/clock1 rising
+
+  Data Path: reset to PC/incAnt
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   1.218   1.443  reset_IBUF (reset_IBUF)
+     LUT3:I0->O            1   0.704   0.420  PC/incAnt_and00001 (PC/incAnt_and0000)
+     FDE:CE                    0.555          PC/incAnt
+    ----------------------------------------
+    Total                      4.340ns (2.477ns logic, 1.863ns route)
+                                       (57.1% logic, 42.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_FREQ/clock1'
   Total number of paths / destination ports: 20 / 17
 -------------------------------------------------------------------------
-Offset:              7.278ns (Levels of Logic = 3)
+Offset:              7.262ns (Levels of Logic = 3)
   Source:            RI/Entrada_7 (FF)
   Destination:       halt (PAD)
-  Source Clock:      DIV_FREQ/clk_out1 rising
+  Source Clock:      DIV_FREQ/clock1 rising
 
   Data Path: RI/Entrada_7 to halt
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            21   0.591   1.163  RI/Entrada_7 (RI/Entrada_7)
-     LUT4:I2->O            1   0.704   0.424  UC/halt44_SW0_SW1 (N183)
+     FDCE:C->Q            18   0.591   1.147  RI/Entrada_7 (RI/Entrada_7)
+     LUT4:I1->O            1   0.704   0.424  UC/halt44_SW0_SW1 (N173)
      LUT4:I3->O            1   0.704   0.420  UC/halt44 (halt_OBUF)
      OBUF:I->O                 3.272          halt_OBUF (halt)
     ----------------------------------------
-    Total                      7.278ns (5.271ns logic, 2.007ns route)
-                                       (72.4% logic, 27.6% route)
+    Total                      7.262ns (5.271ns logic, 1.991ns route)
+                                       (72.6% logic, 27.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'UC/clkDiv'
   Total number of paths / destination ports: 3 / 1
 -------------------------------------------------------------------------
-Offset:              7.341ns (Levels of Logic = 3)
-  Source:            UC/state_FSM_FFd2 (FF)
+Offset:              7.307ns (Levels of Logic = 3)
+  Source:            UC/state_FSM_FFd4 (FF)
   Destination:       halt (PAD)
   Source Clock:      UC/clkDiv rising
 
-  Data Path: UC/state_FSM_FFd2 to halt
+  Data Path: UC/state_FSM_FFd4 to halt
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             17   0.591   1.226  UC/state_FSM_FFd2 (UC/state_FSM_FFd2)
-     LUT4:I0->O            1   0.704   0.424  UC/halt44_SW0_SW1 (N183)
+     FDC:C->Q             15   0.591   1.192  UC/state_FSM_FFd4 (UC/state_FSM_FFd4)
+     LUT4:I0->O            1   0.704   0.424  UC/halt44_SW0_SW1 (N173)
      LUT4:I3->O            1   0.704   0.420  UC/halt44 (halt_OBUF)
      OBUF:I->O                 3.272          halt_OBUF (halt)
     ----------------------------------------
-    Total                      7.341ns (5.271ns logic, 2.070ns route)
-                                       (71.8% logic, 28.2% route)
+    Total                      7.307ns (5.271ns logic, 2.036ns route)
+                                       (72.1% logic, 27.9% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.67 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.63 secs
  
 --> 
 
-Total memory usage is 344300 kilobytes
+Total memory usage is 344248 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   14 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

@@ -41,6 +41,7 @@ end RegistradorRDM;
 
 architecture Behavioral of RegistradorRDM is
 	signal Entrada: std_logic_vector(7 downto 0);
+	signal cargaAnt, RDant : std_logic;
 begin
 	process(clk, reset)
 	begin
@@ -48,9 +49,19 @@ begin
 			Entrada <= "00000000";
 		elsif(clk'event and clk='1') then
 			if(Carga = '1') then
-				Entrada <= A;
+				if(cargaAnt = '0') then
+					Entrada <= A;
+					cargaAnt <= '1';
+				else
+					cargaAnt <= '0';
+				end if;
 			elsif(RD = "0") then
-				Entrada <= B;
+				if(RDant = '0') then
+					Entrada <= B;
+					RDant <= '1';
+				else
+					RDant <= '0';
+				end if;
 			end if;
 		end if;
 	end process;

@@ -42,6 +42,7 @@ end Cont8;
 architecture Behavioral of Cont8 is
 
 	signal dado : std_logic_vector (7 downto 0);
+	signal cargaAnt, incAnt: std_logic;
 
 begin
 
@@ -51,9 +52,19 @@ begin
 			dado <= "00000000";
 		elsif(clk'event and clk='1') then
 			if(carga = '1') then
-				dado <= entrada;
+				if(cargaAnt = '0') then
+					dado <= entrada;
+					cargaAnt <= '1';
+				else
+					cargaAnt <= '0';
+				end if;
 			elsif(incrementa = '1') then
-				dado <= dado + 1;
+				if(incAnt = '0') then
+					dado <= dado + 1;
+					incAnt <= '1';
+				else
+					incAnt <= '0';
+				end if;
 			end if;
 		end if;
 	end process;

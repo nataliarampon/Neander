@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/natal/Documents/GitHub/Neander/TB_Neander_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="tb_neander" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/tb_neander/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/button_mem_inc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">button_mem_inc</obj_property>
+      <obj_property name="ObjectShortName">button_mem_inc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/button_mem_dec" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">button_mem_dec</obj_property>
+      <obj_property name="ObjectShortName">button_mem_dec</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/button_data_inc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">button_data_inc</obj_property>
+      <obj_property name="ObjectShortName">button_data_inc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/button_data_dec" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">button_data_dec</obj_property>
+      <obj_property name="ObjectShortName">button_data_dec</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[7:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/acumulador" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">acumulador[7:0]</obj_property>
+      <obj_property name="ObjectShortName">acumulador[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/halt" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">halt</obj_property>
+      <obj_property name="ObjectShortName">halt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/clkkhz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clkkhz</obj_property>
+      <obj_property name="ObjectShortName">clkkhz</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/cargapc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cargapc</obj_property>
+      <obj_property name="ObjectShortName">cargapc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/cargarem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cargarem</obj_property>
+      <obj_property name="ObjectShortName">cargarem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/cargari" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cargari</obj_property>
+      <obj_property name="ObjectShortName">cargari</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/cargaac" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cargaac</obj_property>
+      <obj_property name="ObjectShortName">cargaac</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/cargardm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cargardm</obj_property>
+      <obj_property name="ObjectShortName">cargardm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/incpc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">incpc</obj_property>
+      <obj_property name="ObjectShortName">incpc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/selrdm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">selrdm</obj_property>
+      <obj_property name="ObjectShortName">selrdm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/write_read" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">write_read[0:0]</obj_property>
+      <obj_property name="ObjectShortName">write_read[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/selrem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">selrem[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selrem[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/pcout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pcout[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/rdmout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rdmout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rdmout[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/remout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">remout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">remout[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neander/uut/acout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">acout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">acout[7:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -39,7 +39,7 @@ end Registrador;
 
 architecture Behavioral of Registrador is
 	signal Entrada: std_logic_vector(7 downto 0);
-
+	signal cargaAnt: std_logic;
 begin
 	
 	process(clk, reset)
@@ -48,7 +48,12 @@ begin
 			Entrada <= "00000000";
 		elsif(clk'event and clk='1') then
 			if(Carga = '1') then
-				Entrada <= E;
+				if(cargaAnt = '0') then
+					Entrada <= E;
+					cargaAnt <= '1';
+				else
+					cargaAnt <= '0';
+				end if;
 			end if;
 		end if;
 	end process;

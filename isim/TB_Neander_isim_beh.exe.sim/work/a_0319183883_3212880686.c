@@ -76,7 +76,7 @@ LAB2:    xsi_set_current_line(64, ng0);
     t2 = (t0 + 4072U);
     t4 = *((char **)t2);
     t9 = *((int *)t4);
-    t1 = (t9 == 2);
+    t1 = (t9 == 1);
     if (t1 != 0)
         goto LAB8;
 

@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/natal/Documents/GitHub/Neander/TB_Neander_isim_beh.exe -prj C:/Users/natal/Documents/GitHub/Neander/TB_Neander_beh.prj work.TB_Neander 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/Users/natal/Documents/GitHub/Neander/TB_Neander_isim_beh.exe" -prj "C:/Users/natal/Documents/GitHub/Neander/TB_Neander_beh.prj" "work.TB_Neander" 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -45,5 +45,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 15 sub-compilation(s) to finish...
 Compiled 39 VHDL Units
 Built simulation executable C:/Users/natal/Documents/GitHub/Neander/TB_Neander_isim_beh.exe
-Fuse Memory Usage: 38448 KB
-Fuse CPU Usage: 905 ms
+Fuse Memory Usage: 38424 KB
+Fuse CPU Usage: 812 ms

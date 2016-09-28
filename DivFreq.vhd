@@ -38,6 +38,7 @@ end DivFreq;
 architecture Behavioral of DivFreq is
 
 	signal cont : integer := 0;
+	signal clock : std_logic := '0';
 
 begin
 
@@ -45,15 +46,14 @@ begin
 	begin
 		if(clk'event and clk='1') then
 			cont <= cont + 1;
-			if (cont = 50000) then
-				clk_out <= '1';
+			if (cont = 10) then
+				clock <= not clock;
 				cont <= 0;
-			else
-				clk_out <= '0';
 			end if;
 		end if;
 
 	end process;
 
+	clk_out <= clock;
 end Behavioral;
 

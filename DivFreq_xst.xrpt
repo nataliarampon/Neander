@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Mon Sep 26 22:47:17 2016">
+  <application stringID="Xst" timeStamp="Tue Sep 27 23:31:45 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -138,7 +138,8 @@
           <item dataType="int" stringID="XST_XORCY" value="32"/>
         </item>
         <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="33">
-          <item dataType="int" stringID="XST_FDR" value="33"/>
+          <item dataType="int" stringID="XST_FDE" value="1"/>
+          <item dataType="int" stringID="XST_FDR" value="32"/>
         </item>
         <item dataType="int" stringID="XST_CLOCK_BUFFERS" value="1">
           <item dataType="int" stringID="XST_BUFGP" value="1"/>
@@ -150,7 +151,7 @@
     </section>
     <section stringID="XST_DEVICE_UTILIZATION_SUMMARY">
       <item stringID="XST_SELECTED_DEVICE" value="3s100ecp132-4"/>
-      <item AVAILABLE="960" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="22"/>
+      <item AVAILABLE="960" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="21"/>
       <item AVAILABLE="1920" dataType="int" label="Number of Slice Flip Flops" stringID="XST_NUMBER_OF_SLICE_FLIP_FLOPS" value="33"/>
       <item AVAILABLE="1920" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="41"/>
       <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="2"/>

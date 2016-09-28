@@ -62,7 +62,7 @@ begin
 	begin
 		if(clk'event and clk='1') then
 			cont <= cont + 1;
-			if (cont = 2) then
+			if (cont = 1) then
 				clkDiv <= '1';
 				cont <= 0;
 			else
